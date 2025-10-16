@@ -1,4 +1,4 @@
-A métrica de complexidade lexical é medida com base em outras métricas. No código, foram utilizadas três métricas para calcular essa.
+A métrica de complexidade lexical (LCI) é medida com base em outras métricas. No código, foram utilizadas três métricas para calcular essa.
 Uma é baseada no comprimento médio das palavras, isso é a média de quantas letras cada palavra do texto tem. Ela é chamada de WL e foi utilizada pois textos com palavras mais longas tendem parecer mais complexos.
 A outra é a frequência de palavras raras (FR), e foi utilizada porque quanto mais termos poucos comuns são usados, maior é a riqueza do texto.
 E por último foi utilizado a diversidade lexical (LD), que mostra quantas palavras diferentes o autor usa sem as repeti-las na redação. Isso porque um texto repetitivo é considerado um texto de pouca qualidade e cansativo.
