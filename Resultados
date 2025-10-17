@@ -133,5 +133,3 @@ Resultados das métricas geradas em cada arquivo do dataset Qwen3-Max:
 135_dualidade_saida.json: LCI = 2.162 (WL=5.287, LD=0.665, FR=0.534)
 
 Média geral da métrica de Complexidade Lexical (LCI): 2.072
-
-135_dualidade_saida.json: LCI = 2.162 (WL=5.287, LD=0.665, FR=0.534)
