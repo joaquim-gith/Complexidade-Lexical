@@ -1,112 +1,168 @@
+# -*- coding: utf-8 -*-
 import os
-import json
 import re
+import json
+import statistics
 
-PASTA = "QwenMax"
 
-def limpar_texto(texto):
-    """Remove pontuação e deixa só palavras."""
-    texto = texto.lower()
-    # Mantendo caracteres acentuados para o Português
-    texto = re.sub(r"[^a-záéíóúàâêôãõç\s]", "", texto) 
-    return texto
+#Função para ordenar os arquivos numericamente
+def natural_sort_key(texto):
+    import re
+    return [int(c) if c.isdigit() else c for c in re.split(r'(\d+)', texto)]
 
-def calcular_metricas(texto):
-    """Calcula WL, LD e FR a partir do texto."""
-    texto = limpar_texto(texto)
-    palavras = texto.split()
+#Análise léxica
+def extrair_palavras(texto):
+    """Extrai palavras com pelo menos 3 caracteres (inclui acentos)."""
+    if not texto or not texto.strip():
+        return []
+    return re.findall(r'\b[a-zA-ZÀ-ÿ]{3,}\b', texto.lower())
+
+def calcular_wl(texto):
+    #Comprimento médio das palavras
+    palavras = extrair_palavras(texto)
     if not palavras:
-        return 0, 0, 0
-    total_palavras = len(palavras)
-    tipos = set(palavras)
-    #Métricas
-    WL = sum(len(p) for p in palavras) / total_palavras  #comprimento médio
-    LD = len(tipos) / total_palavras                      #diversidade lexical (TTR)
-    FR = sum(1 for p in tipos if palavras.count(p) == 1) / total_palavras  #palavras raras
-    return WL, LD, FR
+        return 0.0
+    total_caracteres = sum(len(p) for p in palavras)
+    return total_caracteres / len(palavras)
 
-def calcular_LCI(WL, LD, FR, pesos=(1/3, 1/3, 1/3)):
-    """Calcula o índice composto (LCI). Eles tem o mesmo peso"""
-    w1, w2, w3 = pesos
-    return w1 * WL + w2 * LD + w3 * FR
+def calcular_ld(texto):
+    #Diversidade lexical = tipos/tokens
+    palavras = extrair_palavras(texto)
+    if not palavras:
+        return 0.0
+    tipos = len(set(palavras))
+    tokens = len(palavras)
+    return tipos / tokens if tokens > 0 else 0.0
 
-# Função auxiliar para a ordenação numérica dos arquivos
-def obter_id_numerico(nome_arquivo):
-    """Extrai o número inicial do nome do arquivo para ordenar o número dos arquivos de forma certa."""
-    match = re.match(r'(\d+)', nome_arquivo)
-    if match:
-        return int(match.group(1)) 
-    return float('inf')
+def calcular_fr(texto):
+    #Proporção de palavras raras
+    palavras = extrair_palavras(texto)
+    if not palavras:
+        return 0.0
+    # Nesse código, uma palavra rara foi considerada como uma palavra com mais de 5 caracteres
+    raras = [p for p in palavras if len(p) >= 5]
+    return len(raras) / len(palavras)
 
-def processar_pasta(caminho_pasta):
-    """Percorre todos os arquivos JSON e calcula o Índice de Complexidade Lexical."""
+def calcular_lci(texto, w1=0.3, w2=0.4, w3=0.3):
+    """Índice de complexidade lexical combinado."""
+    wl = calcular_wl(texto)
+    ld = calcular_ld(texto)
+    fr = calcular_fr(texto)
+    lci = w1 * wl + w2 * ld + w3 * fr
+    return lci, wl, ld, fr
+
+
+# Leitura dos datasets
+
+def processar_data():
+    PASTA = "Data"
+    if not os.path.isdir(PASTA):
+        print(f"Pasta 'Data' não encontrada.")
+        return []
+
+    subpastas = [d for d in os.listdir(PASTA) if os.path.isdir(os.path.join(PASTA, d))]
+    subpastas.sort(key=natural_sort_key)
     
-    #Verifica se a pasta existe
-    if not os.path.isdir(caminho_pasta):
-        print(f"ERRO: O diretório '{caminho_pasta}' não existe ou não é uma pasta. Verifique o valor de 'PASTA'.")
-        return
+    lcis = []
+    print("COMANDOS ORIGINAIS (Data)")
+    for subpasta in subpastas:
+        xml_path = os.path.join(PASTA, subpasta, "prompt.xml")
+        if not os.path.isfile(xml_path):
+            continue
 
-    resultados = []
-    arquivos_encontrados = [f for f in os.listdir(caminho_pasta) if f.endswith(".json")]
+        try:
+            with open(xml_path, "r", encoding="utf-8") as f:
+                conteudo = f.read()
+            match = re.search(r"<body>(.*?)</body>", conteudo, re.DOTALL | re.IGNORECASE)
+            if not match:
+                continue
+            body = match.group(1).strip()
+            if not body:
+                continue
+
+            lci, wl, ld, fr = calcular_lci(body)
+            if lci > 0:
+                print(f"{subpasta:<20} - LCI: {lci:.4f} (WL={wl:.2f}, LD={ld:.4f}, FR={fr:.4f})")
+                lcis.append(lci)
+        except:
+            continue
+
+    return lcis
+
+def processar_qwenmax():
+    PASTA = "QwenMax"
+    if not os.path.isdir(PASTA):
+        print(f"Pasta 'QwenMax' não encontrada.")
+        return []
+
+    json_files = [f for f in os.listdir(PASTA) if f.endswith(".json")]
+    json_files.sort(key=natural_sort_key)
     
-    if not arquivos_encontrados:
-        print(f"AVISO: A pasta '{caminho_pasta}' não contém arquivos .json.")
-        return
-
-    for nome in sorted(arquivos_encontrados, key=obter_id_numerico):
-        caminho = os.path.join(caminho_pasta, nome)
+    lcis = []
+    print("COMANDOS SINTÉTICOS (QwenMax)")
+    
+    for arquivo in json_files:
+        caminho = os.path.join(PASTA, arquivo)
         try:
             with open(caminho, "r", encoding="utf-8") as f:
                 dados = json.load(f)
             
-            redacao_data = dados.get("redacao")
-            texto = "" 
-
-            if isinstance(redacao_data, str):
-                texto = redacao_data
-                
-            elif isinstance(redacao_data, dict):
-                
-                partes_da_redacao = []
-                
-                chaves_numericas = sorted(redacao_data.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
-                
-                for chave in chaves_numericas:
-                    parte = redacao_data.get(chave)
-                    if isinstance(parte, str):
-                        partes_da_redacao.append(parte)
-                
-                texto = " ".join(partes_da_redacao)
-                
-            if not texto:
-                #Mensagem de aviso
-                print(f"⚠️ {nome}: 'redacao' não pôde ser lida.")
+            if "comando_tematico" in dados and isinstance(dados["comando_tematico"], dict):
+                comandos = list(dados["comando_tematico"].values())
+            elif isinstance(dados, dict) and all(isinstance(v, str) for v in dados.values()):
+                comandos = list(dados.values())
+            elif isinstance(dados, list):
+                comandos = dados
+            else:
                 continue
 
-            WL, LD, FR = calcular_metricas(texto)
-            LCI = calcular_LCI(WL, LD, FR)
-            resultados.append((nome, WL, LD, FR, LCI))
-            
-            #print em cada arquivo
-            print(f"✅ {nome}: LCI = {LCI:.3f} (WL={WL:.3f}, LD={LD:.3f}, FR={FR:.3f})")
+            for i, cmd in enumerate(comandos):
+                if not isinstance(cmd, str):
+                    continue
+                cmd = cmd.strip()
+                if not cmd:
+                    continue
+                lci, wl, ld, fr = calcular_lci(cmd)
+                if lci > 0:
+                    nome_exibicao = f"{arquivo}#{i}"
+                    print(f"{nome_exibicao:<20} → LCI: {lci:.4f} (WL={wl:.2f}, LD={ld:.4f}, FR={fr:.4f})")
+                    lcis.append(lci)
 
         except Exception as e:
-            print(f"⚠️ Erro ao processar {nome}: {e}")
+            continue
 
-    #Exibe média geral
-    if resultados:
-        media_LCI = sum(r[4] for r in resultados) / len(resultados)
-        print(f"\n Total de arquivos processados: {len(resultados)}")
-        #Saída da média
-        print(f" Média geral da métrica de Complexidade Lexical (LCI): {media_LCI:.3f}")
+    return lcis
+
+
+# Execução principal
+def main():
+    print("Métrica de Complexidade Lexical (LCI)")
+    
+    lcis_originais = processar_data()
+    lcis_sinteticos = processar_qwenmax()
+
+    # --- Originais ---
+    print("\n" + "="*70)
+    print("Dataset Data")
+    print("="*70)
+    if lcis_originais:
+        media = statistics.mean(lcis_originais)
+        desvio = statistics.stdev(lcis_originais) if len(lcis_originais) > 1 else 0.0
+        print(f"Média do LCI:   {media:.4f}")
+        print(f"Desvio padrão:  {desvio:.4f}")
     else:
-        print("Nenhum arquivo processado.")
-        
-    print("\n")
-    print("LCI: Índice de Complexidade Lexical (Média ponderada de WL, LD e FR)")
-    print("WL: Comprimento Médio da Palavra (Word Length)")
-    print("LD: Diversidade Lexical (Lexical Diversity / TTR-Type-Token Ratio)")
-    print("FR: Frequência de Palavras Raras (Frequency of Rare Words)")
-if __name__ == "__main__":
-    processar_pasta(PASTA)
+        print("Nenhum comando original processado.")
 
+    # --- Sintéticos ---
+    print("\n" + "="*70)
+    print("Dataset QwenMax")
+    print("="*70)
+    if lcis_sinteticos:
+        media = statistics.mean(lcis_sinteticos)
+        desvio = statistics.stdev(lcis_sinteticos) if len(lcis_sinteticos) > 1 else 0.0
+        print(f"Média do LCI:   {media:.4f}")
+        print(f"Desvio padrão:  {desvio:.4f}")
+    else:
+        print("Nenhum comando sintético processado.")
+if __name__ == "__main__":
+    main()
