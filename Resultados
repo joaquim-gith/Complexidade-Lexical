@@ -1,517 +1,232 @@
-Métrica de Complexidade Lexical (LCI)
-COMANDOS TEMÁTICOS ORIGINAIS (Data):
-a-aids-nao-e-mais-a-mesma-por-que-diminuiu-o-medo-da-doenca - LCI: 2.3431 (WL=6.10, LD=0.7923, FR=0.6538)
-a-energia-nuclear-e-uma-boa-solucao-para-o-brasil - LCI: 2.4644 (WL=6.24, LD=0.9492, FR=0.7119)
-a-gramatica-facilita-ou-dificulta-a-comunicacao - LCI: 2.5305 (WL=6.44, LD=0.9492, FR=0.7288)
-a-necessidade-de-crer-em-herois - LCI: 2.4750 (WL=6.31, LD=0.9167, FR=0.7222)
-a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel - LCI: 2.5684 (WL=6.64, LD=0.8889, FR=0.7350)
-a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao - LCI: 2.5673 (WL=6.64, LD=0.8598, FR=0.7757)
-a-questao-do-lixo-nas-sociedades-de-consumo - LCI: 2.4803 (WL=6.51, LD=0.8279, FR=0.6557)
-a-sociedade-brasileira-e-os-conflitos-no-transito - LCI: 2.4821 (WL=6.42, LD=0.8482, FR=0.7232)
-a-sociedade-esta-perdendo-a-batalha-contra-o-crime - LCI: 2.3606 (WL=6.01, LD=0.8819, FR=0.6850)
-a-virgindade-e-um-valor-moral-a-ser-preservado - LCI: 2.4861 (WL=6.44, LD=0.8608, FR=0.6962)
-agua-aprenderemos-com-a-atual-crise-hidrica - LCI: 2.3416 (WL=6.06, LD=0.8320, FR=0.6400)
-amar-pode-levar-ao-crime-ou-quem-ama-nao-mata - LCI: 2.1914 (WL=5.57, LD=0.8765, FR=0.5679)
-amor-com-grande-diferenca-de-idade-sera-que-isso-funciona - LCI: 2.3206 (WL=5.92, LD=0.8454, FR=0.6907)
-automedicacao-por-que-a-pratica-e-tao-comum-entre-os-jovens - LCI: 2.3409 (WL=6.11, LD=0.7957, FR=0.6344)
-bicicletas-e-ciclofaixas-estao-chegando-para-ficar - LCI: 2.3367 (WL=6.14, LD=0.7698, FR=0.6259)
-biografias-personagens-e-autores-em-confronto - LCI: 2.4942 (WL=6.52, LD=0.8252, FR=0.6893)
-caso-geisy-exibicionismo-machismo-intolerancia-ou-ma-educacao - LCI: 2.4707 (WL=6.35, LD=0.9022, FR=0.6848)
-cientistas-preveem-futuro-sombrio-para-terra - LCI: 2.2306 (WL=5.73, LD=0.8163, FR=0.6122)
-combate-ao-fumo-autoritarismo-ou-dever-do-governo - LCI: 2.2605 (WL=5.71, LD=0.9070, FR=0.6163)
-como-devem-ser-as-relacoes-entre-as-pessoas-e-seus-animais-de-estimacao - LCI: 2.5133 (WL=6.51, LD=0.8476, FR=0.7333)
-como-resolver-o-problema-da-criminalidade-infantil-em-nossa-sociedade - LCI: 2.5817 (WL=6.65, LD=0.8917, FR=0.7667)
-como-se-tornar-um-consumidor-consciente-isso-e-possivel - LCI: 2.5361 (WL=6.62, LD=0.8611, FR=0.6852)
-como-solucionar-o-problema-do-bullying-na-escola-ou-na-internet - LCI: 2.6667 (WL=7.11, LD=0.6667, FR=0.8889)
-como-voce-encara-os-cursos-a-distancia-e-as-universidades-virtuais - LCI: 2.5932 (WL=6.70, LD=0.9189, FR=0.7162)
-cotas-nas-universidades-voce-e-a-favor-ou-contra - LCI: 2.4653 (WL=6.42, LD=0.8194, FR=0.7083)
-cotas-para-universidades-federais-solucao-ou-problema - LCI: 2.5000 (WL=6.42, LD=0.8729, FR=0.7458)
-cultura-do-estupro-a-culpa-e-da-vitima - LCI: 2.5579 (WL=6.49, LD=0.9474, FR=0.7719)
-deve-ou-nao-haver-leis-mais-rigorosas-controlando-o-consumo-do-alcool - LCI: 2.5088 (WL=6.51, LD=0.8496, FR=0.7168)
-deve-se-reduzir-a-maioridade-penal-no-brasil - LCI: 2.3187 (WL=6.02, LD=0.7985, FR=0.6418)
-e-certo-ou-errado-leiloar-a-virgindade-por-que - LCI: 2.1022 (WL=5.43, LD=0.7721, FR=0.5515)
-e-justo-proibir-o-uso-do-celular-na-sala-de-aula - LCI: 2.4500 (WL=6.11, LD=1.0000, FR=0.7222)
-e-possivel-prevenir-massacres-como-o-da-escola-de-realengo - LCI: 2.7313 (WL=7.06, LD=0.8889, FR=0.8586)
-e-valido-simplificar-a-linguagem-de-um-classico - LCI: 2.5220 (WL=6.56, LD=0.8349, FR=0.7339)
-enchentes-o-excesso-de-chuvas-e-o-unico-responsavel-pelo-desastre - LCI: 2.3839 (WL=6.07, LD=0.8571, FR=0.7321)
-eutanasia-quem-decide-a-hora-certa-de-morrer - LCI: 2.4306 (WL=6.22, LD=0.8681, FR=0.7292)
-experiencias-com-animais-e-violencia-em-manifestacoes - LCI: 2.5617 (WL=6.66, LD=0.8598, FR=0.7290)
-favela-e-cidade-as-distancias-sociais-desapareceram - LCI: 2.4893 (WL=6.45, LD=0.8133, FR=0.7600)
-fomos-dominados-pelas-maquinas-que-inventamos - LCI: 2.3985 (WL=6.20, LD=0.8615, FR=0.6462)
-forma-fisica-corpo-perfeito-e-consumismo - LCI: 2.4704 (WL=6.43, LD=0.8348, FR=0.6870)
-gravidez-fora-de-hora-adolescencia-em-crise - LCI: 2.4068 (WL=6.10, LD=0.9315, FR=0.6849)
-ha-limites-para-a-liberdade-de-expressao - LCI: 2.4148 (WL=6.23, LD=0.8426, FR=0.6944)
-hoje-no-brasil-o-negro-apresenta-o-mesmo-status-social-que-o-branco - LCI: 2.4051 (WL=6.17, LD=0.8163, FR=0.7551)
-horario-politico-obrigatorio-bom-para-quem - LCI: 2.4781 (WL=6.47, LD=0.8281, FR=0.6875)
-idosos-em-nossa-sociedade-valorizados-desvalorizados-ou-privilegiados - LCI: 2.4825 (WL=6.40, LD=0.9000, FR=0.6750)
-intolerancia-religiosa-regra-ou-excecao-no-brasil - LCI: 2.6289 (WL=6.85, LD=0.8969, FR=0.7216)
-justica-x-vinganca-como-nao-confundir-as-duas-coisas - LCI: 2.4466 (WL=6.36, LD=0.8220, FR=0.7034)
-juventude-e-alcoolismo-um-problema-social - LCI: 2.4891 (WL=6.42, LD=0.8261, FR=0.7717)
-leis-e-penas-mais-duras-sao-a-unica-solucao-para-o-transito-brasileiro - LCI: 2.4169 (WL=6.08, LD=0.9322, FR=0.7288)
-lixo-questao-de-cidadania-e-responsabilidade-social - LCI: 2.3815 (WL=6.18, LD=0.8235, FR=0.6555)
-maconha-manter-proibicao-legalizar-descriminalizar - LCI: 2.3345 (WL=6.07, LD=0.8067, FR=0.6387)
-meia-entrada-voce-e-contra-ou-a-favor-por-que - LCI: 2.3482 (WL=6.05, LD=0.8182, FR=0.6818)
-mentira-e-doenca-problema-moral-necessidade-ou-brincadeira - LCI: 2.5118 (WL=6.44, LD=0.8925, FR=0.7419)
-nacional-ou-importada-qual-a-cara-do-brasil - LCI: 2.5067 (WL=6.33, LD=0.9333, FR=0.7778)
-norma-culta-x-variantes-linguisticas-qual-deve-ser-a-posicao-da-escola - LCI: 2.3791 (WL=6.21, LD=0.7907, FR=0.6667)
-o-aborto-deve-ou-nao-deve-ser-legalizado-por-que - LCI: 2.3554 (WL=6.00, LD=0.8554, FR=0.7108)
-o-brasil-e-o-conflito-defesa-do-meio-ambiente-x-desenvolvimento-economico - LCI: 2.6281 (WL=6.83, LD=0.9062, FR=0.7188)
-o-conceito-de-familia-pode-ou-nao-pode-mudar - LCI: 2.2406 (WL=5.92, LD=0.6923, FR=0.6224)
-o-conflito-entre-geracoes-e-a-convivencia-social - LCI: 2.5556 (WL=6.64, LD=0.8611, FR=0.7315)
-o-famoso-conflito-de-geracoes-ainda-existe-hoje - LCI: 2.4099 (WL=6.17, LD=0.9014, FR=0.6620)
-o-fumo-deve-ser-proibido-em-todos-os-lugares - LCI: 2.4190 (WL=6.18, LD=0.9048, FR=0.6786)
-o-horario-de-propaganda-eleitoral-e-util-para-o-eleitor - LCI: 2.4492 (WL=6.38, LD=0.8115, FR=0.7049)
-o-jovem-perdeu-o-interesse-pela-participacao-eleitoral-por-que - LCI: 2.3828 (WL=6.11, LD=0.8621, FR=0.6782)
-o-mma-e-um-esporte-como-outros-ou-injustificada-glorificacao-da-violencia - LCI: 2.4056 (WL=6.01, LD=0.9859, FR=0.6901)
-o-papel-do-estado-na-vida-do-cidadao-e-das-nacoes - LCI: 2.3617 (WL=6.10, LD=0.8167, FR=0.6833)
-o-preconceito-racial-esta-chegando-ao-fim - LCI: 2.3517 (WL=6.00, LD=0.8621, FR=0.6897)
-o-que-e-ser-homem-nos-dias-de-hoje - LCI: 2.5256 (WL=6.49, LD=0.9222, FR=0.7000)
-o-que-muda-no-pais-apos-as-manifestacoes-populares - LCI: 2.5904 (WL=6.65, LD=0.8870, FR=0.8000)
-o-que-voce-acha-do-ensino-nas-escolas-do-brasil - LCI: 2.4467 (WL=6.37, LD=0.8267, FR=0.6800)
-o-que-voce-acha-do-novo-acordo-ortografico - LCI: 2.5224 (WL=6.53, LD=0.8684, FR=0.7237)
-o-que-voce-pensa-da-proibicao-a-pratica-do-castigo-fisico - LCI: 2.3255 (WL=5.99, LD=0.8163, FR=0.6735)
-o-supremo-tribunal-federal-fez-bem-em-legalizar-o-aborto-de-anencefalos - LCI: 2.3652 (WL=6.10, LD=0.8261, FR=0.6870)
-o-uso-da-maconha-deve-ou-nao-ser-legalizado - LCI: 2.4200 (WL=6.22, LD=0.8923, FR=0.6615)
-o-voto-nulo-e-um-ato-politico-valido - LCI: 2.1727 (WL=5.18, LD=1.0000, FR=0.7273)
-organismos-transgenicos-fonte-de-problemas-ou-de-solucoes - LCI: 2.5474 (WL=6.64, LD=0.8421, FR=0.7281)
-os-efeitos-da-covardia-e-da-coragem-sobre-a-sociedade - LCI: 2.3812 (WL=6.15, LD=0.7820, FR=0.7444)
-por-que-a-ideia-de-fim-do-mundo-atrai-e-assusta - LCI: 2.2940 (WL=5.92, LD=0.8300, FR=0.6200)
-por-que-as-pessoas-mentem-pela-internet - LCI: 2.4932 (WL=6.37, LD=0.9322, FR=0.6949)
-por-que-causas-o-jovem-tem-se-mobilizado-atualmente-no-brasil - LCI: 2.5465 (WL=6.65, LD=0.8310, FR=0.7254)
-por-que-o-patriotismo-brasileiro-so-se-revela-em-epoca-de-copa-do-mundo - LCI: 2.4120 (WL=6.28, LD=0.8043, FR=0.6848)
-quais-as-condicoes-necessarias-para-se-atingir-o-sucesso-profissional - LCI: 2.5349 (WL=6.44, LD=0.9683, FR=0.7143)
-qual-a-importancia-para-o-brasil-e-para-o-mundo-da-crise-financeira-dos-paises-da-zona-do-euro - LCI: 2.3939 (WL=6.27, LD=0.8030, FR=0.6439)
-qual-a-relacao-entre-o-estudo-e-uma-carreira-profissional-bem-sucedida - LCI: 2.3870 (WL=6.17, LD=0.8348, FR=0.6783)
-qual-e-o-limite-entre-o-trote-e-o-crime - LCI: 2.4893 (WL=6.40, LD=0.8689, FR=0.7377)
-qual-o-papel-da-imprensa-numa-sociedade-democratica - LCI: 2.4022 (WL=6.20, LD=0.8370, FR=0.6957)
-qual-o-papel-da-mulher-na-sociedade-brasileira-atual - LCI: 2.4760 (WL=6.39, LD=0.8462, FR=0.7308)
-qual-sera-o-legado-da-copa-do-mundo-para-o-brasil - LCI: 2.2916 (WL=5.94, LD=0.7944, FR=0.6355)
-racismo-como-virar-de-vez-essa-triste-pagina-da-historia - LCI: 2.4814 (WL=6.37, LD=0.8938, FR=0.7080)
-reforma-politica-no-brasil-qual-o-melhor-modelo-de-votacao - LCI: 2.5554 (WL=6.56, LD=0.9010, FR=0.7525)
-selinho-e-inocente-ou-tem-significado-sexual - LCI: 2.1372 (WL=5.40, LD=0.8718, FR=0.5641)
-terrorismo-o-brasil-tem-razoes-para-teme-lo - LCI: 2.3857 (WL=6.20, LD=0.8403, FR=0.6303)
-toque-de-recolher-protege-juventude-e-sociedade - LCI: 2.3833 (WL=5.92, LD=1.0000, FR=0.6944)
-um-cachorro-vale-mais-do-que-um-ser-humano - LCI: 2.2235 (WL=5.59, LD=0.8824, FR=0.6471)
-viagem-sem-volta-a-marte-pioneirismo-ou-alucinacao - LCI: 2.3528 (WL=6.00, LD=0.8889, FR=0.6574)
-violencia-escolar-expor-o-problema-e-sugerir-solucoes - LCI: 2.2879 (WL=5.92, LD=0.7931, FR=0.6466)
-votar-em-palhaco-e-uma-forma-valida-de-protestar - LCI: 2.3121 (WL=5.96, LD=0.8318, FR=0.6355)
+QwenMax - Média: 2.9459, Desvio padrão: 0.1377
+Dataset Data - Média: 2.4909, Desvio padrão: 0.1522
+O Data é o dataset com os comandos temáticos originais, enquanto o QwenMax, possui os sintéticos, que são os comandos temáticos que foram gerados a partir dos originais
+Resultados Dataset QwenMax:
+1_a-aids-e-seu-contagio_saida.json → Complexidade lexical: 3.0333
+2_a-aids-estaria-sendo-esquecida_saida.json → Complexidade lexical: 2.6667
+3_a-vida-nao-pode-parar_saida.json → Complexidade lexical: 2.8962
+4_aids-doenca-fatal_saida.json → Complexidade lexical: 3.0000
+5_aids-sem-medo_saida.json → Complexidade lexical: 2.8969
+6_ate-quando-nao-levar-a-serio_saida.json → Complexidade lexical: 2.6981
+7_atualmente_saida.json → Complexidade lexical: 2.7778
+8_como-conviver-com-a-aids_saida.json → Complexidade lexical: 2.7714
+9_condicoes-para-jovens-sem-medo_saida.json → Complexidade lexical: 2.8431
+10_convivendo-com-a-aids_saida.json → Complexidade lexical: 2.7255
+11_falacia-da-juventude_saida.json → Complexidade lexical: 2.7822
+12_joias-perdidas-em-silencio_saida.json → Complexidade lexical: 2.7228
+13_o-mal-do-seculo_saida.json → Complexidade lexical: 2.7885
+14_sem-titulo-_saida.json → Complexidade lexical: 2.7921
+15_sexo-versos-versus-descuido-fatalidades_saida.json → Complexidade lexical: 2.8485
+16_uma-questao-de-consciencia_saida.json → Complexidade lexical: 2.8273
+17_ult4657u64_saida.json → Complexidade lexical: 3.1324
+18_ult4657u65_saida.json → Complexidade lexical: 3.0897
+19_ult4657u66_saida.json → Complexidade lexical: 2.7568
+20_ult4657u67_saida.json → Complexidade lexical: 3.1014
+21_ult4657u68_saida.json → Complexidade lexical: 2.7848
+22_ult4657u69_saida.json → Complexidade lexical: 2.7857
+23_ult4657u70_saida.json → Complexidade lexical: 3.2353
+24_ult4657u71_saida.json → Complexidade lexical: 2.7662
+25_ult4657u72_saida.json → Complexidade lexical: 2.8312
+26_ult4657u73_saida.json → Complexidade lexical: 2.8974
+27_ult4657u74_saida.json → Complexidade lexical: 2.7324
+28_ult4657u75_saida.json → Complexidade lexical: 2.8621
+29_ult4657u76_saida.json → Complexidade lexical: 2.7284
+30_ult4657u77_saida.json → Complexidade lexical: 2.9079
+31_ult4657u78_saida.json → Complexidade lexical: 3.0000
+32_ult4657u79_saida.json → Complexidade lexical: 2.9600
+33_ult4657u80_saida.json → Complexidade lexical: 2.8791
+34_ult4657u81_saida.json → Complexidade lexical: 3.1975
+35_ult4657u82_saida.json → Complexidade lexical: 2.7093
+36_ult4657u83_saida.json → Complexidade lexical: 3.0741
+37_ult4657u105_saida.json → Complexidade lexical: 3.0000
+38_ult4657u106_saida.json → Complexidade lexical: 3.0247
+39_ult4657u107_saida.json → Complexidade lexical: 3.0972
+40_ult4657u108_saida.json → Complexidade lexical: 3.0132
+41_ult4657u109_saida.json → Complexidade lexical: 2.8590
+42_ult4657u110_saida.json → Complexidade lexical: 2.9178
+43_ult4657u111_saida.json → Complexidade lexical: 2.9865
+44_ult4657u112_saida.json → Complexidade lexical: 2.9744
+45_ult4657u113_saida.json → Complexidade lexical: 2.9600
+46_ult4657u114_saida.json → Complexidade lexical: 3.0625
+47_ult4657u115_saida.json → Complexidade lexical: 3.0465
+48_ult4657u116_saida.json → Complexidade lexical: 3.0267
+49_ult4657u117_saida.json → Complexidade lexical: 3.0395
+50_ult4657u118_saida.json → Complexidade lexical: 3.0139
+51_ult4657u119_saida.json → Complexidade lexical: 3.1449
+52_ult4657u120_saida.json → Complexidade lexical: 3.0649
+53_ult4657u121_saida.json → Complexidade lexical: 2.9625
+54_ult4657u122_saida.json → Complexidade lexical: 2.9867
+55_ult4657u123_saida.json → Complexidade lexical: 2.9610
+56_ult4657u23_saida.json → Complexidade lexical: 2.7952
+57_ult4657u24_saida.json → Complexidade lexical: 2.9012
+58_ult4657u25_saida.json → Complexidade lexical: 2.9296
+59_ult4657u26_saida.json → Complexidade lexical: 2.9385
+60_ult4657u27_saida.json → Complexidade lexical: 3.1538
+61_ult4657u28_saida.json → Complexidade lexical: 3.0152
+62_ult4657u29_saida.json → Complexidade lexical: 2.8333
+63_ult4657u30_saida.json → Complexidade lexical: 2.7105
+64_ult4657u31_saida.json → Complexidade lexical: 2.9405
+65_ult4657u32_saida.json → Complexidade lexical: 2.8352
+66_ult4657u33_saida.json → Complexidade lexical: 2.8919
+67_ult4657u35_saida.json → Complexidade lexical: 2.8586
+68_ult4657u36_saida.json → Complexidade lexical: 3.0256
+70_ult4657u38_saida.json → Complexidade lexical: 2.8557
+71_ult4657u39_saida.json → Complexidade lexical: 2.8500
+72_ult4657u40_saida.json → Complexidade lexical: 2.7011
+74_ult4657u42_saida.json → Complexidade lexical: 2.8354
+76_a-democracia-mascarada-por-interesses_saida.json → Complexidade lexical: 2.9101
+77_a-inseguranca-publica_saida.json → Complexidade lexical: 2.9012
+78_a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel_saida.json → Complexidade lexical: 3.0000
+79_ate-onde-vai-o-limite-para-um-protesto_saida.json → Complexidade lexical: 2.7033
+80_atos-de-selvageria_saida.json → Complexidade lexical: 2.8764
+81_definicao_saida.json → Complexidade lexical: 2.9870
+82_despreparacao_saida.json → Complexidade lexical: 2.8737
+83_excesso-de-autoridade_saida.json → Complexidade lexical: 2.9565
+84_imediata_saida.json → Complexidade lexical: 2.9753
+85_ja_saida.json → Complexidade lexical: 2.8526
+86_manifestantes-x-policiais-expressao-ou-repressao_saida.json → Complexidade lexical: 2.7857
+87_nos-quarteis-lhes-ensinam-matar-sem-razao_saida.json → Complexidade lexical: 3.0778
+88_os-tenis-idealizados_saida.json → Complexidade lexical: 2.7640
+89_policia-repressora-ou-pacificadora_saida.json → Complexidade lexical: 2.7113
+90_por-bem-fazer-mal-haver_saida.json → Complexidade lexical: 2.9889
+91_sem-titulo-_saida.json → Complexidade lexical: 2.9014
+92_todos-por-um_saida.json → Complexidade lexical: 2.9178
+93_treinamento-para-a-paz_saida.json → Complexidade lexical: 2.9000
+94_a-populacao-pede-socorro_saida.json → Complexidade lexical: 3.0610
+95_a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao_saida.json → Complexidade lexical: 2.9859
+96_alianca-entre-governo-e-familia_saida.json → Complexidade lexical: 3.0986
+97_alimentacao-tem-limite_saida.json → Complexidade lexical: 3.1842
+98_alimentar_saida.json → Complexidade lexical: 3.0759
+99_e-mais-facil-comer-o-problema-do-que-acabar-com-ele_saida.json → Complexidade lexical: 3.1558
+100_e-tempo-da-reeducacao-alimentar_saida.json → Complexidade lexical: 2.9318
+101_em-busca-de-uma-vida-saudavel_saida.json → Complexidade lexical: 3.0000
+102_escolha-alimentar-uma-responsabilidade-geral_saida.json → Complexidade lexical: 3.2278
+103_fast-food-da-morte_saida.json → Complexidade lexical: 2.9412
+104_modernidade-um-prejuizo-a-saude_saida.json → Complexidade lexical: 2.8987
+105_nao-existem-culpados_saida.json → Complexidade lexical: 3.2706
+106_o-cruel-jogo-da-trash-food-no-brasil-imediatista_saida.json → Complexidade lexical: 3.2593
+107_o-futuro-de-seus-filhos_saida.json → Complexidade lexical: 2.7925
+108_o-poder-de-influencia-na-escolha-alimentar_saida.json → Complexidade lexical: 3.0366
+109_obesidade-infantil-quem-deve-combate-la_saida.json → Complexidade lexical: 2.8416
+110_responsabilidade-de-todos_saida.json → Complexidade lexical: 3.1011
+111_tudo-comeca-quando-crianca_saida.json → Complexidade lexical: 3.1300
+113_a-necessidade-de-superacao-do-problema-do-lixo_saida.json → Complexidade lexical: 3.0506
+114_a-questao-dos-lixos-na-sociedade-de-consumo_saida.json → Complexidade lexical: 3.2703
+115_a-sociedade-consumista-e-a-natureza_saida.json → Complexidade lexical: 3.0230
+116_antropicas_saida.json → Complexidade lexical: 2.9888
+117_educacao-a-solucao-para-o-problema-ambiental_saida.json → Complexidade lexical: 2.9798
+118_lixo-lixo-lixo-prejuizo-ou-beneficio_saida.json → Complexidade lexical: 2.9703
+119_o-feitico-contra-o-feiticeiro_saida.json → Complexidade lexical: 2.9247
+120_o-futuro-do-nosso-planeta_saida.json → Complexidade lexical: 3.0345
+121_o-lixo-como-produto-do-consumo-alienado_saida.json → Complexidade lexical: 3.0792
+122_o-lixo-como-solucao_saida.json → Complexidade lexical: 2.9388
+123_o-lixo-e-suas-consequencias-na-sociedade_saida.json → Complexidade lexical: 2.9720
+124_o-monopolio-da-destruicao-monopolio-da-destruicao_saida.json → Complexidade lexical: 2.9100
+125_o-verdadeiro-problema-do-lixo-seu-descarte-incorreto_saida.json → Complexidade lexical: 3.0556
+126_os-verdadeiro-viloes_saida.json → Complexidade lexical: 3.1546
+127_planeta-terra-a-lata-de-lixo-comunitaria_saida.json → Complexidade lexical: 3.0417
+128_salvando-o-planeta_saida.json → Complexidade lexical: 2.8247
+129_sem-titulo-_saida.json → Complexidade lexical: 2.9796
+130_todo-ciclo-deve-ser-respeitado-o-do-lixo-tambem_saida.json → Complexidade lexical: 2.8911
+131_a-pressa-e-inimiga-do-bom-motorista_saida.json → Complexidade lexical: 3.0323
+132_caos-nas-ruas_saida.json → Complexidade lexical: 3.0638
+133_conscientizar-e-reduzir_saida.json → Complexidade lexical: 3.1368
+134_discussoes-no-transito_saida.json → Complexidade lexical: 2.7857
+135_dualidade_saida.json → Complexidade lexical: 3.0119
 
-COMANDOS TEMÁTICOS SINTÉTICOS (QwenMax):
-1_a-aids-e-seu-contagio_saida.json#0 → LCI: 3.3000 (WL=8.67, LD=1.0000, FR=1.0000)
-1_a-aids-e-seu-contagio_saida.json#1 → LCI: 2.8818 (WL=7.45, LD=1.0000, FR=0.8182)
-1_a-aids-e-seu-contagio_saida.json#2 → LCI: 2.6852 (WL=6.93, LD=0.9630, FR=0.7407)
-1_a-aids-e-seu-contagio_saida.json#3 → LCI: 3.0885 (WL=8.12, LD=1.0000, FR=0.8462)
-2_a-aids-estaria-sendo-esquecida_saida.json#0 → LCI: 2.9333 (WL=7.67, LD=1.0000, FR=0.7778)
-2_a-aids-estaria-sendo-esquecida_saida.json#1 → LCI: 2.3714 (WL=5.86, LD=1.0000, FR=0.7143)
-2_a-aids-estaria-sendo-esquecida_saida.json#2 → LCI: 3.2500 (WL=8.50, LD=1.0000, FR=1.0000)
-2_a-aids-estaria-sendo-esquecida_saida.json#3 → LCI: 2.6714 (WL=6.86, LD=1.0000, FR=0.7143)
-3_a-vida-nao-pode-parar_saida.json#0 → LCI: 2.7409 (WL=7.00, LD=0.9545, FR=0.8636)
-3_a-vida-nao-pode-parar_saida.json#1 → LCI: 2.7929 (WL=7.32, LD=0.9286, FR=0.7500)
-3_a-vida-nao-pode-parar_saida.json#2 → LCI: 2.8038 (WL=7.27, LD=0.9231, FR=0.8462)
-3_a-vida-nao-pode-parar_saida.json#3 → LCI: 2.8300 (WL=7.27, LD=1.0000, FR=0.8333)
-4_aids-doenca-fatal_saida.json#0 → LCI: 3.0778 (WL=8.11, LD=1.0000, FR=0.8148)
-4_aids-doenca-fatal_saida.json#1 → LCI: 2.9238 (WL=7.71, LD=0.9524, FR=0.7619)
-4_aids-doenca-fatal_saida.json#2 → LCI: 2.7963 (WL=7.22, LD=0.9630, FR=0.8148)
-4_aids-doenca-fatal_saida.json#3 → LCI: 2.7464 (WL=7.04, LD=1.0000, FR=0.7857)
-5_aids-sem-medo_saida.json#0 → LCI: 2.3889 (WL=5.96, LD=1.0000, FR=0.6667)
-5_aids-sem-medo_saida.json#1 → LCI: 2.9455 (WL=7.82, LD=0.9545, FR=0.7273)
-5_aids-sem-medo_saida.json#2 → LCI: 2.9880 (WL=7.80, LD=0.9600, FR=0.8800)
-5_aids-sem-medo_saida.json#3 → LCI: 2.7739 (WL=7.13, LD=1.0000, FR=0.7826)
-6_ate-quando-nao-levar-a-serio_saida.json#0 → LCI: 2.6429 (WL=6.81, LD=1.0000, FR=0.6667)
-6_ate-quando-nao-levar-a-serio_saida.json#1 → LCI: 2.4750 (WL=6.29, LD=0.9643, FR=0.6786)
-6_ate-quando-nao-levar-a-serio_saida.json#2 → LCI: 2.8467 (WL=7.37, LD=0.9667, FR=0.8333)
-6_ate-quando-nao-levar-a-serio_saida.json#3 → LCI: 2.4444 (WL=6.11, LD=1.0000, FR=0.7037)
-7_atualmente_saida.json#0 → LCI: 2.8643 (WL=7.57, LD=1.0000, FR=0.6429)
-7_atualmente_saida.json#1 → LCI: 2.3037 (WL=5.74, LD=0.9259, FR=0.7037)
-7_atualmente_saida.json#2 → LCI: 2.7731 (WL=7.12, LD=0.9615, FR=0.8462)
-7_atualmente_saida.json#3 → LCI: 2.8500 (WL=7.39, LD=1.0000, FR=0.7778)
-8_como-conviver-com-a-aids_saida.json#0 → LCI: 2.3786 (WL=5.96, LD=0.9643, FR=0.6786)
-8_como-conviver-com-a-aids_saida.json#1 → LCI: 2.7087 (WL=6.91, LD=1.0000, FR=0.7826)
-8_como-conviver-com-a-aids_saida.json#2 → LCI: 2.8786 (WL=7.50, LD=0.9286, FR=0.8571)
-8_como-conviver-com-a-aids_saida.json#3 → LCI: 2.7423 (WL=7.04, LD=1.0000, FR=0.7692)
-9_condicoes-para-jovens-sem-medo_saida.json#0 → LCI: 2.7444 (WL=7.07, LD=1.0000, FR=0.7407)
-9_condicoes-para-jovens-sem-medo_saida.json#1 → LCI: 2.7667 (WL=7.07, LD=1.0000, FR=0.8148)
-9_condicoes-para-jovens-sem-medo_saida.json#2 → LCI: 2.8000 (WL=7.16, LD=1.0000, FR=0.8400)
-9_condicoes-para-jovens-sem-medo_saida.json#3 → LCI: 3.1136 (WL=8.23, LD=1.0000, FR=0.8182)
-10_convivendo-com-a-aids_saida.json#0 → LCI: 2.6565 (WL=6.83, LD=1.0000, FR=0.6957)
-10_convivendo-com-a-aids_saida.json#1 → LCI: 2.6875 (WL=6.92, LD=1.0000, FR=0.7083)
-10_convivendo-com-a-aids_saida.json#2 → LCI: 2.6467 (WL=6.70, LD=0.9667, FR=0.8333)
-10_convivendo-com-a-aids_saida.json#3 → LCI: 2.8783 (WL=7.48, LD=1.0000, FR=0.7826)
-11_falacia-da-juventude_saida.json#0 → LCI: 2.9200 (WL=7.55, LD=1.0000, FR=0.8500)
-11_falacia-da-juventude_saida.json#1 → LCI: 2.4562 (WL=6.22, LD=0.9375, FR=0.7188)
-11_falacia-da-juventude_saida.json#2 → LCI: 3.0154 (WL=7.88, LD=0.9615, FR=0.8846)
-11_falacia-da-juventude_saida.json#3 → LCI: 2.6565 (WL=6.74, LD=1.0000, FR=0.7826)
-12_joias-perdidas-em-silencio_saida.json#0 → LCI: 2.4308 (WL=5.96, LD=1.0000, FR=0.8077)
-12_joias-perdidas-em-silencio_saida.json#1 → LCI: 2.8409 (WL=7.36, LD=1.0000, FR=0.7727)
-12_joias-perdidas-em-silencio_saida.json#2 → LCI: 2.6828 (WL=6.79, LD=0.9655, FR=0.8621)
-12_joias-perdidas-em-silencio_saida.json#3 → LCI: 2.6500 (WL=6.71, LD=1.0000, FR=0.7917)
-13_o-mal-do-seculo_saida.json#0 → LCI: 2.7160 (WL=6.96, LD=1.0000, FR=0.7600)
-13_o-mal-do-seculo_saida.json#1 → LCI: 2.8231 (WL=7.27, LD=1.0000, FR=0.8077)
-13_o-mal-do-seculo_saida.json#2 → LCI: 2.5500 (WL=6.50, LD=0.9231, FR=0.7692)
-13_o-mal-do-seculo_saida.json#3 → LCI: 2.9000 (WL=7.56, LD=1.0000, FR=0.7778)
-14_sem-titulo-_saida.json#0 → LCI: 2.5346 (WL=6.46, LD=1.0000, FR=0.6538)
-14_sem-titulo-_saida.json#1 → LCI: 2.9909 (WL=7.73, LD=1.0000, FR=0.9091)
-14_sem-titulo-_saida.json#2 → LCI: 2.7815 (WL=7.19, LD=0.9259, FR=0.8519)
-14_sem-titulo-_saida.json#3 → LCI: 2.6731 (WL=6.77, LD=1.0000, FR=0.8077)
-15_sexo-versos-versus-descuido-fatalidades_saida.json#0 → LCI: 2.4625 (WL=6.21, LD=1.0000, FR=0.6667)
-15_sexo-versos-versus-descuido-fatalidades_saida.json#1 → LCI: 3.2500 (WL=8.62, LD=1.0000, FR=0.8750)
-15_sexo-versos-versus-descuido-fatalidades_saida.json#2 → LCI: 2.7586 (WL=7.07, LD=1.0000, FR=0.7931)
-15_sexo-versos-versus-descuido-fatalidades_saida.json#3 → LCI: 2.6727 (WL=6.86, LD=0.9545, FR=0.7727)
-16_uma-questao-de-consciencia_saida.json#0 → LCI: 2.7903 (WL=7.19, LD=1.0000, FR=0.7742)
-16_uma-questao-de-consciencia_saida.json#1 → LCI: 2.6160 (WL=6.76, LD=0.9600, FR=0.6800)
-16_uma-questao-de-consciencia_saida.json#2 → LCI: 2.8625 (WL=7.50, LD=0.9688, FR=0.7500)
-16_uma-questao-de-consciencia_saida.json#3 → LCI: 2.6636 (WL=6.73, LD=1.0000, FR=0.8182)
-17_ult4657u64_saida.json#0 → LCI: 3.2105 (WL=8.58, LD=1.0000, FR=0.7895)
-17_ult4657u64_saida.json#1 → LCI: 3.1000 (WL=8.12, LD=1.0000, FR=0.8800)
-17_ult4657u64_saida.json#2 → LCI: 2.7458 (WL=7.12, LD=0.9583, FR=0.7500)
-18_ult4657u65_saida.json#0 → LCI: 3.0769 (WL=8.08, LD=1.0000, FR=0.8462)
-18_ult4657u65_saida.json#1 → LCI: 3.1320 (WL=8.28, LD=0.9600, FR=0.8800)
-18_ult4657u65_saida.json#2 → LCI: 2.8889 (WL=7.41, LD=1.0000, FR=0.8889)
-19_ult4657u66_saida.json#0 → LCI: 2.7368 (WL=6.95, LD=1.0000, FR=0.8421)
-19_ult4657u66_saida.json#1 → LCI: 2.8625 (WL=7.42, LD=1.0000, FR=0.7917)
-19_ult4657u66_saida.json#2 → LCI: 2.6742 (WL=6.81, LD=1.0000, FR=0.7742)
-20_ult4657u67_saida.json#0 → LCI: 2.9667 (WL=7.72, LD=1.0000, FR=0.8333)
-20_ult4657u67_saida.json#1 → LCI: 2.9500 (WL=7.64, LD=1.0000, FR=0.8636)
-20_ult4657u67_saida.json#2 → LCI: 2.8621 (WL=7.41, LD=1.0000, FR=0.7931)
-21_ult4657u68_saida.json#0 → LCI: 2.7077 (WL=6.92, LD=1.0000, FR=0.7692)
-21_ult4657u68_saida.json#1 → LCI: 2.9773 (WL=7.68, LD=1.0000, FR=0.9091)
-21_ult4657u68_saida.json#2 → LCI: 2.6355 (WL=6.65, LD=1.0000, FR=0.8065)
-22_ult4657u69_saida.json#0 → LCI: 2.6400 (WL=6.80, LD=0.9600, FR=0.7200)
-22_ult4657u69_saida.json#1 → LCI: 2.6714 (WL=6.76, LD=1.0000, FR=0.8095)
-22_ult4657u69_saida.json#2 → LCI: 2.8125 (WL=7.21, LD=1.0000, FR=0.8333)
-23_ult4657u70_saida.json#0 → LCI: 3.0062 (WL=8.00, LD=1.0000, FR=0.6875)
-23_ult4657u70_saida.json#1 → LCI: 2.9560 (WL=7.60, LD=1.0000, FR=0.9200)
-23_ult4657u70_saida.json#2 → LCI: 3.3000 (WL=8.70, LD=1.0000, FR=0.9630)
-24_ult4657u71_saida.json#0 → LCI: 2.5769 (WL=6.58, LD=0.9615, FR=0.7308)
-24_ult4657u71_saida.json#1 → LCI: 2.8286 (WL=7.33, LD=1.0000, FR=0.7619)
-24_ult4657u71_saida.json#2 → LCI: 2.6800 (WL=6.80, LD=1.0000, FR=0.8000)
-25_ult4657u72_saida.json#0 → LCI: 2.4964 (WL=6.32, LD=0.9643, FR=0.7143)
-25_ult4657u72_saida.json#1 → LCI: 2.8286 (WL=7.24, LD=1.0000, FR=0.8571)
-25_ult4657u72_saida.json#2 → LCI: 2.9821 (WL=7.79, LD=1.0000, FR=0.8214)
-26_ult4657u73_saida.json#0 → LCI: 2.7500 (WL=7.08, LD=1.0000, FR=0.7500)
-26_ult4657u73_saida.json#1 → LCI: 2.6893 (WL=6.89, LD=0.9643, FR=0.7857)
-26_ult4657u73_saida.json#2 → LCI: 2.9615 (WL=7.69, LD=1.0000, FR=0.8462)
-27_ult4657u74_saida.json#0 → LCI: 2.7455 (WL=7.05, LD=1.0000, FR=0.7727)
-27_ult4657u74_saida.json#1 → LCI: 2.3320 (WL=5.76, LD=1.0000, FR=0.6800)
-27_ult4657u74_saida.json#2 → LCI: 2.9333 (WL=7.67, LD=0.9583, FR=0.8333)
-28_ult4657u75_saida.json#0 → LCI: 2.5968 (WL=6.55, LD=1.0000, FR=0.7742)
-28_ult4657u75_saida.json#1 → LCI: 3.0333 (WL=7.85, LD=1.0000, FR=0.9259)
-28_ult4657u75_saida.json#2 → LCI: 2.8310 (WL=7.28, LD=1.0000, FR=0.8276)
-29_ult4657u76_saida.json#0 → LCI: 2.6696 (WL=6.70, LD=1.0000, FR=0.8696)
-29_ult4657u76_saida.json#1 → LCI: 2.9560 (WL=7.52, LD=1.0000, FR=1.0000)
-29_ult4657u76_saida.json#2 → LCI: 2.5970 (WL=6.61, LD=0.9697, FR=0.7576)
-30_ult4657u77_saida.json#0 → LCI: 2.7739 (WL=7.17, LD=1.0000, FR=0.7391)
-30_ult4657u77_saida.json#1 → LCI: 3.1000 (WL=8.20, LD=1.0000, FR=0.8000)
-30_ult4657u77_saida.json#2 → LCI: 2.7485 (WL=7.15, LD=0.9394, FR=0.7576)
-31_ult4657u78_saida.json#0 → LCI: 2.8524 (WL=7.43, LD=0.9524, FR=0.8095)
-31_ult4657u78_saida.json#1 → LCI: 2.6174 (WL=6.70, LD=1.0000, FR=0.6957)
-31_ult4657u78_saida.json#2 → LCI: 2.9962 (WL=7.77, LD=1.0000, FR=0.8846)
-32_ult4657u79_saida.json#0 → LCI: 2.6238 (WL=6.71, LD=0.9524, FR=0.7619)
-32_ult4657u79_saida.json#1 → LCI: 2.9207 (WL=7.66, LD=0.9655, FR=0.7931)
-32_ult4657u79_saida.json#2 → LCI: 2.9320 (WL=7.68, LD=1.0000, FR=0.7600)
-33_ult4657u80_saida.json#0 → LCI: 2.4719 (WL=6.34, LD=0.9062, FR=0.6875)
-33_ult4657u80_saida.json#1 → LCI: 3.1281 (WL=8.22, LD=1.0000, FR=0.8750)
-33_ult4657u80_saida.json#2 → LCI: 2.8852 (WL=7.48, LD=0.9630, FR=0.8519)
-34_ult4657u81_saida.json#0 → LCI: 2.9040 (WL=7.52, LD=0.9600, FR=0.8800)
-34_ult4657u81_saida.json#1 → LCI: 3.1097 (WL=8.26, LD=1.0000, FR=0.7742)
-34_ult4657u81_saida.json#2 → LCI: 3.1240 (WL=8.20, LD=1.0000, FR=0.8800)
-35_ult4657u82_saida.json#0 → LCI: 2.6630 (WL=6.81, LD=0.9630, FR=0.7778)
-35_ult4657u82_saida.json#1 → LCI: 2.7160 (WL=6.92, LD=1.0000, FR=0.8000)
-35_ult4657u82_saida.json#2 → LCI: 2.5235 (WL=6.41, LD=0.9706, FR=0.7059)
-36_ult4657u83_saida.json#0 → LCI: 2.8545 (WL=7.27, LD=1.0000, FR=0.9091)
-36_ult4657u83_saida.json#1 → LCI: 2.8857 (WL=7.46, LD=1.0000, FR=0.8214)
-36_ult4657u83_saida.json#2 → LCI: 3.1290 (WL=8.19, LD=1.0000, FR=0.9032)
-37_ult4657u105_saida.json#0 → LCI: 3.0250 (WL=7.88, LD=1.0000, FR=0.8750)
-37_ult4657u105_saida.json#1 → LCI: 2.9857 (WL=7.71, LD=1.0000, FR=0.9048)
-37_ult4657u105_saida.json#2 → LCI: 2.8207 (WL=7.21, LD=1.0000, FR=0.8621)
-38_ult4657u106_saida.json#0 → LCI: 2.8240 (WL=7.24, LD=1.0000, FR=0.8400)
-38_ult4657u106_saida.json#1 → LCI: 2.9207 (WL=7.59, LD=0.9655, FR=0.8621)
-38_ult4657u106_saida.json#2 → LCI: 3.0778 (WL=8.00, LD=1.0000, FR=0.9259)
-39_ult4657u107_saida.json#0 → LCI: 3.4632 (WL=9.32, LD=1.0000, FR=0.8947)
-39_ult4657u107_saida.json#1 → LCI: 3.0571 (WL=7.90, LD=1.0000, FR=0.9524)
-39_ult4657u107_saida.json#2 → LCI: 2.8969 (WL=7.50, LD=0.9375, FR=0.9062)
-40_ult4657u108_saida.json#0 → LCI: 3.1000 (WL=8.10, LD=1.0000, FR=0.9048)
-40_ult4657u108_saida.json#1 → LCI: 2.9000 (WL=7.48, LD=1.0000, FR=0.8571)
-40_ult4657u108_saida.json#2 → LCI: 2.7647 (WL=7.09, LD=1.0000, FR=0.7941)
-41_ult4657u109_saida.json#0 → LCI: 2.8750 (WL=7.46, LD=1.0000, FR=0.7917)
-41_ult4657u109_saida.json#1 → LCI: 2.9714 (WL=7.71, LD=1.0000, FR=0.8571)
-41_ult4657u109_saida.json#2 → LCI: 2.6697 (WL=6.79, LD=0.9697, FR=0.8182)
-42_ult4657u110_saida.json#0 → LCI: 2.8409 (WL=7.32, LD=1.0000, FR=0.8182)
-42_ult4657u110_saida.json#1 → LCI: 2.8818 (WL=7.45, LD=1.0000, FR=0.8182)
-42_ult4657u110_saida.json#2 → LCI: 2.9138 (WL=7.52, LD=1.0000, FR=0.8621)
-43_ult4657u111_saida.json#0 → LCI: 3.4450 (WL=9.25, LD=1.0000, FR=0.9000)
-43_ult4657u111_saida.json#1 → LCI: 2.8857 (WL=7.43, LD=1.0000, FR=0.8571)
-43_ult4657u111_saida.json#2 → LCI: 2.6091 (WL=6.61, LD=1.0000, FR=0.7576)
-44_ult4657u112_saida.json#0 → LCI: 2.9800 (WL=7.75, LD=1.0000, FR=0.8500)
-44_ult4657u112_saida.json#1 → LCI: 2.8429 (WL=7.25, LD=1.0000, FR=0.8929)
-44_ult4657u112_saida.json#2 → LCI: 2.8800 (WL=7.43, LD=1.0000, FR=0.8333)
-45_ult4657u113_saida.json#0 → LCI: 2.9050 (WL=7.55, LD=1.0000, FR=0.8000)
-45_ult4657u113_saida.json#1 → LCI: 2.8900 (WL=7.40, LD=1.0000, FR=0.9000)
-45_ult4657u113_saida.json#2 → LCI: 2.9286 (WL=7.51, LD=1.0000, FR=0.9143)
-46_ult4657u114_saida.json#0 → LCI: 2.8375 (WL=7.25, LD=1.0000, FR=0.8750)
-46_ult4657u114_saida.json#1 → LCI: 2.9957 (WL=7.87, LD=1.0000, FR=0.7826)
-46_ult4657u114_saida.json#2 → LCI: 2.8545 (WL=7.39, LD=1.0000, FR=0.7879)
-47_ult4657u115_saida.json#0 → LCI: 2.9345 (WL=7.62, LD=1.0000, FR=0.8276)
-47_ult4657u115_saida.json#1 → LCI: 3.0778 (WL=8.07, LD=1.0000, FR=0.8519)
-47_ult4657u115_saida.json#2 → LCI: 2.8000 (WL=7.17, LD=1.0000, FR=0.8333)
-48_ult4657u116_saida.json#0 → LCI: 3.1130 (WL=8.17, LD=1.0000, FR=0.8696)
-48_ult4657u116_saida.json#1 → LCI: 2.8261 (WL=7.22, LD=1.0000, FR=0.8696)
-48_ult4657u116_saida.json#2 → LCI: 2.8517 (WL=7.28, LD=1.0000, FR=0.8966)
-49_ult4657u117_saida.json#0 → LCI: 2.9143 (WL=7.52, LD=1.0000, FR=0.8571)
-49_ult4657u117_saida.json#1 → LCI: 3.1708 (WL=8.46, LD=0.9583, FR=0.8333)
-49_ult4657u117_saida.json#2 → LCI: 2.7806 (WL=7.13, LD=1.0000, FR=0.8065)
-50_ult4657u118_saida.json#0 → LCI: 2.7348 (WL=7.04, LD=1.0000, FR=0.7391)
-50_ult4657u118_saida.json#1 → LCI: 3.1000 (WL=8.17, LD=1.0000, FR=0.8261)
-50_ult4657u118_saida.json#2 → LCI: 2.9154 (WL=7.58, LD=1.0000, FR=0.8077)
-51_ult4657u119_saida.json#0 → LCI: 3.3647 (WL=8.94, LD=1.0000, FR=0.9412)
-51_ult4657u119_saida.json#1 → LCI: 3.1750 (WL=8.33, LD=1.0000, FR=0.9167)
-51_ult4657u119_saida.json#2 → LCI: 2.8393 (WL=7.39, LD=0.9643, FR=0.7857)
-52_ult4657u120_saida.json#0 → LCI: 2.6462 (WL=6.81, LD=0.9615, FR=0.7308)
-52_ult4657u120_saida.json#1 → LCI: 3.1130 (WL=8.17, LD=1.0000, FR=0.8696)
-52_ult4657u120_saida.json#2 → LCI: 3.0000 (WL=7.89, LD=0.9643, FR=0.8214)
-53_ult4657u121_saida.json#0 → LCI: 2.7769 (WL=7.19, LD=1.0000, FR=0.7308)
-53_ult4657u121_saida.json#1 → LCI: 3.0154 (WL=8.00, LD=0.9615, FR=0.7692)
-53_ult4657u121_saida.json#2 → LCI: 2.8321 (WL=7.29, LD=1.0000, FR=0.8214)
-54_ult4657u122_saida.json#0 → LCI: 2.8208 (WL=7.38, LD=0.9583, FR=0.7500)
-54_ult4657u122_saida.json#1 → LCI: 3.0143 (WL=7.76, LD=1.0000, FR=0.9524)
-54_ult4657u122_saida.json#2 → LCI: 2.9167 (WL=7.63, LD=0.9667, FR=0.8000)
-55_ult4657u123_saida.json#0 → LCI: 2.9174 (WL=7.57, LD=1.0000, FR=0.8261)
-55_ult4657u123_saida.json#1 → LCI: 2.7889 (WL=7.11, LD=1.0000, FR=0.8519)
-55_ult4657u123_saida.json#2 → LCI: 2.9556 (WL=7.67, LD=1.0000, FR=0.8519)
-56_ult4657u23_saida.json#0 → LCI: 2.8429 (WL=7.32, LD=1.0000, FR=0.8214)
-56_ult4657u23_saida.json#1 → LCI: 2.9125 (WL=7.50, LD=1.0000, FR=0.8750)
-56_ult4657u23_saida.json#2 → LCI: 2.6516 (WL=6.84, LD=0.9677, FR=0.7097)
-57_ult4657u24_saida.json#0 → LCI: 2.9000 (WL=7.50, LD=1.0000, FR=0.8333)
-57_ult4657u24_saida.json#1 → LCI: 3.1519 (WL=8.30, LD=0.9630, FR=0.9259)
-57_ult4657u24_saida.json#2 → LCI: 2.5900 (WL=6.53, LD=1.0000, FR=0.7667)
-58_ult4657u25_saida.json#0 → LCI: 2.9636 (WL=7.68, LD=1.0000, FR=0.8636)
-58_ult4657u25_saida.json#1 → LCI: 2.9286 (WL=7.62, LD=1.0000, FR=0.8095)
-58_ult4657u25_saida.json#2 → LCI: 2.6679 (WL=6.89, LD=0.9643, FR=0.7143)
-59_ult4657u26_saida.json#0 → LCI: 2.7238 (WL=7.05, LD=0.9524, FR=0.7619)
-59_ult4657u26_saida.json#1 → LCI: 2.9571 (WL=7.76, LD=1.0000, FR=0.7619)
-59_ult4657u26_saida.json#2 → LCI: 2.8261 (WL=7.26, LD=1.0000, FR=0.8261)
-60_ult4657u27_saida.json#0 → LCI: 2.7815 (WL=7.19, LD=0.9259, FR=0.8519)
-60_ult4657u27_saida.json#1 → LCI: 3.0885 (WL=8.19, LD=1.0000, FR=0.7692)
-60_ult4657u27_saida.json#2 → LCI: 3.0040 (WL=7.80, LD=1.0000, FR=0.8800)
-61_ult4657u28_saida.json#0 → LCI: 2.9429 (WL=7.62, LD=1.0000, FR=0.8571)
-61_ult4657u28_saida.json#1 → LCI: 2.8783 (WL=7.48, LD=1.0000, FR=0.7826)
-61_ult4657u28_saida.json#2 → LCI: 2.8136 (WL=7.18, LD=1.0000, FR=0.8636)
-62_ult4657u29_saida.json#0 → LCI: 2.7400 (WL=7.00, LD=1.0000, FR=0.8000)
-62_ult4657u29_saida.json#1 → LCI: 2.7630 (WL=7.15, LD=0.9630, FR=0.7778)
-62_ult4657u29_saida.json#2 → LCI: 2.8000 (WL=7.19, LD=1.0000, FR=0.8077)
-63_ult4657u30_saida.json#0 → LCI: 2.7500 (WL=7.00, LD=1.0000, FR=0.8333)
-63_ult4657u30_saida.json#1 → LCI: 2.4120 (WL=6.04, LD=0.9600, FR=0.7200)
-63_ult4657u30_saida.json#2 → LCI: 2.7111 (WL=7.00, LD=1.0000, FR=0.7037)
-64_ult4657u31_saida.json#0 → LCI: 2.9038 (WL=7.50, LD=1.0000, FR=0.8462)
-64_ult4657u31_saida.json#1 → LCI: 2.6862 (WL=6.90, LD=1.0000, FR=0.7241)
-64_ult4657u31_saida.json#2 → LCI: 2.8414 (WL=7.31, LD=1.0000, FR=0.8276)
-65_ult4657u32_saida.json#0 → LCI: 2.6143 (WL=6.71, LD=0.9429, FR=0.7429)
-65_ult4657u32_saida.json#1 → LCI: 2.7889 (WL=7.22, LD=1.0000, FR=0.7407)
-65_ult4657u32_saida.json#2 → LCI: 2.8310 (WL=7.31, LD=1.0000, FR=0.7931)
-66_ult4657u33_saida.json#0 → LCI: 2.8158 (WL=7.21, LD=1.0000, FR=0.8421)
-66_ult4657u33_saida.json#1 → LCI: 2.7774 (WL=7.23, LD=0.9677, FR=0.7419)
-66_ult4657u33_saida.json#2 → LCI: 2.9750 (WL=7.79, LD=1.0000, FR=0.7917)
-67_ult4657u35_saida.json#0 → LCI: 2.7378 (WL=7.08, LD=0.9459, FR=0.7838)
-67_ult4657u35_saida.json#1 → LCI: 2.7970 (WL=7.30, LD=0.9697, FR=0.7273)
-67_ult4657u35_saida.json#2 → LCI: 2.8724 (WL=7.34, LD=1.0000, FR=0.8966)
-68_ult4657u36_saida.json#0 → LCI: 3.1240 (WL=8.20, LD=1.0000, FR=0.8800)
-68_ult4657u36_saida.json#1 → LCI: 3.0591 (WL=8.05, LD=1.0000, FR=0.8182)
-68_ult4657u36_saida.json#2 → LCI: 2.8258 (WL=7.32, LD=0.9677, FR=0.8065)
-70_ult4657u38_saida.json#0 → LCI: 2.7694 (WL=7.17, LD=0.9444, FR=0.8056)
-70_ult4657u38_saida.json#1 → LCI: 2.7440 (WL=7.16, LD=0.9200, FR=0.7600)
-70_ult4657u38_saida.json#2 → LCI: 2.7861 (WL=7.31, LD=0.9444, FR=0.7222)
-71_ult4657u39_saida.json#0 → LCI: 2.9250 (WL=7.58, LD=1.0000, FR=0.8333)
-71_ult4657u39_saida.json#1 → LCI: 2.6750 (WL=6.88, LD=1.0000, FR=0.7083)
-71_ult4657u39_saida.json#2 → LCI: 2.6625 (WL=6.94, LD=0.9375, FR=0.6875)
-72_ult4657u40_saida.json#0 → LCI: 2.6138 (WL=6.66, LD=1.0000, FR=0.7241)
-72_ult4657u40_saida.json#1 → LCI: 2.7125 (WL=6.92, LD=1.0000, FR=0.7917)
-72_ult4657u40_saida.json#2 → LCI: 2.6029 (WL=6.68, LD=0.9706, FR=0.7059)
-74_ult4657u42_saida.json#0 → LCI: 2.7643 (WL=7.14, LD=0.9643, FR=0.7857)
-74_ult4657u42_saida.json#1 → LCI: 2.7125 (WL=6.88, LD=1.0000, FR=0.8333)
-74_ult4657u42_saida.json#2 → LCI: 2.7889 (WL=7.22, LD=1.0000, FR=0.7407)
-76_a-democracia-mascarada-por-interesses_saida.json#0 → LCI: 2.8321 (WL=7.39, LD=1.0000, FR=0.7143)
-76_a-democracia-mascarada-por-interesses_saida.json#1 → LCI: 2.7515 (WL=7.12, LD=0.9697, FR=0.7576)
-76_a-democracia-mascarada-por-interesses_saida.json#2 → LCI: 2.9179 (WL=7.57, LD=1.0000, FR=0.8214)
-77_a-inseguranca-publica_saida.json#0 → LCI: 2.7880 (WL=7.16, LD=1.0000, FR=0.8000)
-77_a-inseguranca-publica_saida.json#1 → LCI: 2.8360 (WL=7.24, LD=1.0000, FR=0.8800)
-77_a-inseguranca-publica_saida.json#2 → LCI: 2.8300 (WL=7.33, LD=1.0000, FR=0.7667)
-78_a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel_saida.json#0 → LCI: 2.8800 (WL=7.63, LD=0.9429, FR=0.7143)
-78_a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel_saida.json#1 → LCI: 3.1000 (WL=8.08, LD=1.0000, FR=0.9231)
-78_a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel_saida.json#2 → LCI: 2.8242 (WL=7.30, LD=0.9697, FR=0.8182)
-79_ate-onde-vai-o-limite-para-um-protesto_saida.json#0 → LCI: 2.7269 (WL=7.00, LD=0.9615, FR=0.8077)
-79_ate-onde-vai-o-limite-para-um-protesto_saida.json#1 → LCI: 2.7818 (WL=7.21, LD=0.9091, FR=0.8485)
-79_ate-onde-vai-o-limite-para-um-protesto_saida.json#2 → LCI: 2.5226 (WL=6.48, LD=0.9355, FR=0.6774)
-80_atos-de-selvageria_saida.json#0 → LCI: 2.7897 (WL=7.24, LD=1.0000, FR=0.7241)
-80_atos-de-selvageria_saida.json#1 → LCI: 2.8500 (WL=7.30, LD=1.0000, FR=0.8667)
-80_atos-de-selvageria_saida.json#2 → LCI: 2.9207 (WL=7.62, LD=0.9655, FR=0.8276)
-81_definicao_saida.json#0 → LCI: 3.3095 (WL=8.86, LD=0.9524, FR=0.9048)
-81_definicao_saida.json#1 → LCI: 2.7828 (WL=7.28, LD=0.9310, FR=0.7586)
-81_definicao_saida.json#2 → LCI: 2.9111 (WL=7.52, LD=1.0000, FR=0.8519)
-82_despreparacao_saida.json#0 → LCI: 2.8840 (WL=7.44, LD=1.0000, FR=0.8400)
-82_despreparacao_saida.json#1 → LCI: 2.7714 (WL=7.09, LD=0.9714, FR=0.8571)
-82_despreparacao_saida.json#2 → LCI: 2.7457 (WL=7.11, LD=0.9714, FR=0.7429)
-83_excesso-de-autoridade_saida.json#0 → LCI: 2.9393 (WL=7.68, LD=1.0000, FR=0.7857)
-83_excesso-de-autoridade_saida.json#1 → LCI: 2.7968 (WL=7.26, LD=0.9677, FR=0.7742)
-83_excesso-de-autoridade_saida.json#2 → LCI: 2.7515 (WL=7.12, LD=0.9697, FR=0.7576)
-84_imediata_saida.json#0 → LCI: 3.0864 (WL=8.18, LD=1.0000, FR=0.7727)
-84_imediata_saida.json#1 → LCI: 2.8840 (WL=7.48, LD=1.0000, FR=0.8000)
-84_imediata_saida.json#2 → LCI: 2.6382 (WL=6.79, LD=0.9706, FR=0.7059)
-85_ja_saida.json#0   → LCI: 2.8900 (WL=7.53, LD=1.0000, FR=0.7667)
-85_ja_saida.json#1   → LCI: 2.8000 (WL=7.15, LD=1.0000, FR=0.8485)
-85_ja_saida.json#2   → LCI: 2.7484 (WL=7.13, LD=0.9677, FR=0.7419)
-86_manifestantes-x-policiais-expressao-ou-repressao_saida.json#0 → LCI: 3.0550 (WL=8.00, LD=1.0000, FR=0.8500)
-86_manifestantes-x-policiais-expressao-ou-repressao_saida.json#1 → LCI: 2.6281 (WL=6.72, LD=0.9688, FR=0.7500)
-86_manifestantes-x-policiais-expressao-ou-repressao_saida.json#2 → LCI: 2.6187 (WL=6.75, LD=0.9688, FR=0.6875)
-87_nos-quarteis-lhes-ensinam-matar-sem-razao_saida.json#0 → LCI: 2.9966 (WL=7.79, LD=1.0000, FR=0.8621)
-87_nos-quarteis-lhes-ensinam-matar-sem-razao_saida.json#1 → LCI: 3.0280 (WL=7.88, LD=1.0000, FR=0.8800)
-87_nos-quarteis-lhes-ensinam-matar-sem-razao_saida.json#2 → LCI: 2.8250 (WL=7.28, LD=1.0000, FR=0.8056)
-88_os-tenis-idealizados_saida.json#0 → LCI: 2.5935 (WL=6.61, LD=0.9677, FR=0.7419)
-88_os-tenis-idealizados_saida.json#1 → LCI: 2.9889 (WL=7.74, LD=1.0000, FR=0.8889)
-88_os-tenis-idealizados_saida.json#2 → LCI: 2.4742 (WL=6.29, LD=0.9355, FR=0.7097)
-89_policia-repressora-ou-pacificadora_saida.json#0 → LCI: 2.6794 (WL=6.97, LD=0.9412, FR=0.7059)
-89_policia-repressora-ou-pacificadora_saida.json#1 → LCI: 2.6286 (WL=6.71, LD=1.0000, FR=0.7143)
-89_policia-repressora-ou-pacificadora_saida.json#2 → LCI: 2.7964 (WL=7.29, LD=0.9643, FR=0.7500)
-90_por-bem-fazer-mal-haver_saida.json#0 → LCI: 2.7355 (WL=7.10, LD=0.9355, FR=0.7742)
-90_por-bem-fazer-mal-haver_saida.json#1 → LCI: 3.2103 (WL=8.52, LD=0.9655, FR=0.8966)
-90_por-bem-fazer-mal-haver_saida.json#2 → LCI: 2.8379 (WL=7.41, LD=0.9655, FR=0.7586)
-91_sem-titulo-_saida.json#0 → LCI: 2.7385 (WL=7.04, LD=0.9615, FR=0.8077)
-91_sem-titulo-_saida.json#1 → LCI: 2.7360 (WL=7.00, LD=0.9600, FR=0.8400)
-91_sem-titulo-_saida.json#2 → LCI: 3.0400 (WL=7.85, LD=1.0000, FR=0.9500)
-92_todos-por-um_saida.json#0 → LCI: 2.9565 (WL=7.74, LD=1.0000, FR=0.7826)
-92_todos-por-um_saida.json#1 → LCI: 2.8280 (WL=7.36, LD=0.9200, FR=0.8400)
-92_todos-por-um_saida.json#2 → LCI: 2.8875 (WL=7.42, LD=1.0000, FR=0.8750)
-93_treinamento-para-a-paz_saida.json#0 → LCI: 3.1500 (WL=8.33, LD=1.0000, FR=0.8333)
-93_treinamento-para-a-paz_saida.json#1 → LCI: 2.7750 (WL=7.19, LD=0.9375, FR=0.8125)
-93_treinamento-para-a-paz_saida.json#2 → LCI: 2.6900 (WL=6.87, LD=1.0000, FR=0.7667)
-94_a-populacao-pede-socorro_saida.json#0 → LCI: 3.0885 (WL=8.19, LD=1.0000, FR=0.7692)
-94_a-populacao-pede-socorro_saida.json#1 → LCI: 3.0889 (WL=7.96, LD=1.0000, FR=1.0000)
-94_a-populacao-pede-socorro_saida.json#2 → LCI: 2.7690 (WL=7.03, LD=1.0000, FR=0.8621)
-95_a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao_saida.json#0 → LCI: 3.0158 (WL=8.00, LD=0.9474, FR=0.7895)
-95_a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao_saida.json#1 → LCI: 2.9320 (WL=7.60, LD=1.0000, FR=0.8400)
-95_a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao_saida.json#2 → LCI: 2.7778 (WL=7.11, LD=1.0000, FR=0.8148)
-96_alianca-entre-governo-e-familia_saida.json#0 → LCI: 2.9269 (WL=7.62, LD=1.0000, FR=0.8077)
-96_alianca-entre-governo-e-familia_saida.json#1 → LCI: 2.9350 (WL=7.55, LD=1.0000, FR=0.9000)
-96_alianca-entre-governo-e-familia_saida.json#2 → LCI: 2.9800 (WL=7.72, LD=1.0000, FR=0.8800)
-97_alimentacao-tem-limite_saida.json#0 → LCI: 3.2000 (WL=8.50, LD=1.0000, FR=0.8333)
-97_alimentacao-tem-limite_saida.json#1 → LCI: 2.9083 (WL=7.50, LD=0.9583, FR=0.9167)
-97_alimentacao-tem-limite_saida.json#2 → LCI: 2.8929 (WL=7.50, LD=0.9643, FR=0.8571)
-98_alimentar_saida.json#0 → LCI: 2.9125 (WL=7.54, LD=1.0000, FR=0.8333)
-98_alimentar_saida.json#1 → LCI: 2.8444 (WL=7.33, LD=1.0000, FR=0.8148)
-98_alimentar_saida.json#2 → LCI: 2.9393 (WL=7.68, LD=1.0000, FR=0.7857)
-99_e-mais-facil-comer-o-problema-do-que-acabar-com-ele_saida.json#0 → LCI: 3.2000 (WL=8.50, LD=1.0000, FR=0.8333)
-99_e-mais-facil-comer-o-problema-do-que-acabar-com-ele_saida.json#1 → LCI: 3.0409 (WL=7.91, LD=0.9545, FR=0.9545)
-99_e-mais-facil-comer-o-problema-do-que-acabar-com-ele_saida.json#2 → LCI: 2.8484 (WL=7.35, LD=1.0000, FR=0.8065)
-100_e-tempo-da-reeducacao-alimentar_saida.json#0 → LCI: 2.9933 (WL=7.97, LD=0.9333, FR=0.7667)
-100_e-tempo-da-reeducacao-alimentar_saida.json#1 → LCI: 2.5290 (WL=6.35, LD=1.0000, FR=0.7419)
-100_e-tempo-da-reeducacao-alimentar_saida.json#2 → LCI: 2.9296 (WL=7.63, LD=0.9630, FR=0.8519)
-101_em-busca-de-uma-vida-saudavel_saida.json#0 → LCI: 3.1063 (WL=8.25, LD=0.9688, FR=0.8125)
-101_em-busca-de-uma-vida-saudavel_saida.json#1 → LCI: 2.8250 (WL=7.17, LD=1.0000, FR=0.9167)
-101_em-busca-de-uma-vida-saudavel_saida.json#2 → LCI: 2.7875 (WL=7.16, LD=0.9688, FR=0.8438)
-102_escolha-alimentar-uma-responsabilidade-geral_saida.json#0 → LCI: 3.0609 (WL=8.04, LD=1.0000, FR=0.8261)
-102_escolha-alimentar-uma-responsabilidade-geral_saida.json#1 → LCI: 3.0036 (WL=7.71, LD=1.0000, FR=0.9643)
-102_escolha-alimentar-uma-responsabilidade-geral_saida.json#2 → LCI: 3.0571 (WL=8.00, LD=1.0000, FR=0.8571)
-103_fast-food-da-morte_saida.json#0 → LCI: 2.9111 (WL=7.56, LD=1.0000, FR=0.8148)
-103_fast-food-da-morte_saida.json#1 → LCI: 2.9143 (WL=7.50, LD=0.9643, FR=0.9286)
-103_fast-food-da-morte_saida.json#2 → LCI: 2.7000 (WL=6.87, LD=1.0000, FR=0.8000)
-104_modernidade-um-prejuizo-a-saude_saida.json#0 → LCI: 2.8452 (WL=7.52, LD=0.9677, FR=0.6774)
-104_modernidade-um-prejuizo-a-saude_saida.json#1 → LCI: 3.0500 (WL=7.92, LD=1.0000, FR=0.9167)
-104_modernidade-um-prejuizo-a-saude_saida.json#2 → LCI: 2.5875 (WL=6.50, LD=1.0000, FR=0.7917)
-105_nao-existem-culpados_saida.json#0 → LCI: 3.2000 (WL=8.55, LD=0.9655, FR=0.8276)
-105_nao-existem-culpados_saida.json#1 → LCI: 3.1444 (WL=8.30, LD=1.0000, FR=0.8519)
-105_nao-existem-culpados_saida.json#2 → LCI: 2.9552 (WL=7.69, LD=1.0000, FR=0.8276)
-106_o-cruel-jogo-da-trash-food-no-brasil-imediatista_saida.json#0 → LCI: 3.1536 (WL=8.32, LD=1.0000, FR=0.8571)
-106_o-cruel-jogo-da-trash-food-no-brasil-imediatista_saida.json#1 → LCI: 3.1808 (WL=8.38, LD=1.0000, FR=0.8846)
-106_o-cruel-jogo-da-trash-food-no-brasil-imediatista_saida.json#2 → LCI: 2.9556 (WL=7.63, LD=1.0000, FR=0.8889)
-107_o-futuro-de-seus-filhos_saida.json#0 → LCI: 2.8057 (WL=7.37, LD=0.9714, FR=0.6857)
-107_o-futuro-de-seus-filhos_saida.json#1 → LCI: 2.8882 (WL=7.41, LD=1.0000, FR=0.8824)
-107_o-futuro-de-seus-filhos_saida.json#2 → LCI: 2.6081 (WL=6.70, LD=0.9459, FR=0.7297)
-108_o-poder-de-influencia-na-escolha-alimentar_saida.json#0 → LCI: 3.0864 (WL=8.09, LD=1.0000, FR=0.8636)
-108_o-poder-de-influencia-na-escolha-alimentar_saida.json#1 → LCI: 3.1000 (WL=8.15, LD=1.0000, FR=0.8462)
-108_o-poder-de-influencia-na-escolha-alimentar_saida.json#2 → LCI: 2.7147 (WL=7.00, LD=0.9412, FR=0.7941)
-109_obesidade-infantil-quem-deve-combate-la_saida.json#0 → LCI: 2.7903 (WL=7.19, LD=1.0000, FR=0.7742)
-109_obesidade-infantil-quem-deve-combate-la_saida.json#1 → LCI: 2.9000 (WL=7.46, LD=0.9714, FR=0.9143)
-109_obesidade-infantil-quem-deve-combate-la_saida.json#2 → LCI: 2.6743 (WL=6.94, LD=0.9429, FR=0.7143)
-110_responsabilidade-de-todos_saida.json#0 → LCI: 3.1179 (WL=8.25, LD=0.9643, FR=0.8571)
-110_responsabilidade-de-todos_saida.json#1 → LCI: 3.1774 (WL=8.45, LD=1.0000, FR=0.8065)
-110_responsabilidade-de-todos_saida.json#2 → LCI: 2.8400 (WL=7.33, LD=1.0000, FR=0.8000)
-111_tudo-comeca-quando-crianca_saida.json#0 → LCI: 3.3471 (WL=8.88, LD=1.0000, FR=0.9412)
-111_tudo-comeca-quando-crianca_saida.json#1 → LCI: 3.1857 (WL=8.38, LD=1.0000, FR=0.9048)
-111_tudo-comeca-quando-crianca_saida.json#2 → LCI: 2.8192 (WL=7.35, LD=0.9615, FR=0.7692)
-111_tudo-comeca-quando-crianca_saida.json#3 → LCI: 2.7333 (WL=7.14, LD=0.9167, FR=0.7500)
-113_a-necessidade-de-superacao-do-problema-do-lixo_saida.json#0 → LCI: 3.0571 (WL=7.95, LD=1.0000, FR=0.9048)
-113_a-necessidade-de-superacao-do-problema-do-lixo_saida.json#1 → LCI: 2.8214 (WL=7.18, LD=1.0000, FR=0.8929)
-113_a-necessidade-de-superacao-do-problema-do-lixo_saida.json#2 → LCI: 2.7633 (WL=7.23, LD=0.9333, FR=0.7333)
-114_a-questao-dos-lixos-na-sociedade-de-consumo_saida.json#0 → LCI: 2.9636 (WL=7.73, LD=1.0000, FR=0.8182)
-114_a-questao-dos-lixos-na-sociedade-de-consumo_saida.json#1 → LCI: 3.4652 (WL=9.26, LD=1.0000, FR=0.9565)
-114_a-questao-dos-lixos-na-sociedade-de-consumo_saida.json#2 → LCI: 2.7966 (WL=7.28, LD=0.9655, FR=0.7586)
-115_a-sociedade-consumista-e-a-natureza_saida.json#0 → LCI: 3.0640 (WL=8.08, LD=1.0000, FR=0.8000)
-115_a-sociedade-consumista-e-a-natureza_saida.json#1 → LCI: 2.8258 (WL=7.39, LD=0.9677, FR=0.7419)
-115_a-sociedade-consumista-e-a-natureza_saida.json#2 → LCI: 2.7774 (WL=7.16, LD=0.9677, FR=0.8065)
-116_antropicas_saida.json#0 → LCI: 2.6862 (WL=6.86, LD=1.0000, FR=0.7586)
-116_antropicas_saida.json#1 → LCI: 3.0690 (WL=8.03, LD=1.0000, FR=0.8621)
-116_antropicas_saida.json#2 → LCI: 2.8065 (WL=7.26, LD=0.9677, FR=0.8065)
-117_educacao-a-solucao-para-o-problema-ambiental_saida.json#0 → LCI: 2.9500 (WL=7.69, LD=1.0000, FR=0.8125)
-117_educacao-a-solucao-para-o-problema-ambiental_saida.json#1 → LCI: 2.6222 (WL=6.67, LD=0.9722, FR=0.7778)
-117_educacao-a-solucao-para-o-problema-ambiental_saida.json#2 → LCI: 2.8419 (WL=7.42, LD=0.9355, FR=0.8065)
-118_lixo-lixo-lixo-prejuizo-ou-beneficio_saida.json#0 → LCI: 2.8724 (WL=7.45, LD=1.0000, FR=0.7931)
-118_lixo-lixo-lixo-prejuizo-ou-beneficio_saida.json#1 → LCI: 2.9514 (WL=7.70, LD=0.9730, FR=0.8378)
-118_lixo-lixo-lixo-prejuizo-ou-beneficio_saida.json#2 → LCI: 2.7000 (WL=6.97, LD=0.9429, FR=0.7714)
-119_o-feitico-contra-o-feiticeiro_saida.json#0 → LCI: 2.8444 (WL=7.33, LD=1.0000, FR=0.8148)
-119_o-feitico-contra-o-feiticeiro_saida.json#1 → LCI: 2.9286 (WL=7.60, LD=1.0000, FR=0.8286)
-119_o-feitico-contra-o-feiticeiro_saida.json#2 → LCI: 2.7677 (WL=7.13, LD=0.9677, FR=0.8065)
-120_o-futuro-do-nosso-planeta_saida.json#0 → LCI: 3.0348 (WL=7.87, LD=1.0000, FR=0.9130)
-120_o-futuro-do-nosso-planeta_saida.json#1 → LCI: 2.7912 (WL=7.21, LD=1.0000, FR=0.7647)
-120_o-futuro-do-nosso-planeta_saida.json#2 → LCI: 2.9433 (WL=7.73, LD=0.9333, FR=0.8333)
-121_o-lixo-como-produto-do-consumo-alienado_saida.json#0 → LCI: 3.1222 (WL=8.22, LD=1.0000, FR=0.8519)
-121_o-lixo-como-produto-do-consumo-alienado_saida.json#1 → LCI: 2.7537 (WL=7.07, LD=0.9756, FR=0.8049)
-121_o-lixo-como-produto-do-consumo-alienado_saida.json#2 → LCI: 2.9152 (WL=7.61, LD=0.9697, FR=0.8182)
-122_o-lixo-como-solucao_saida.json#0 → LCI: 2.8321 (WL=7.32, LD=1.0000, FR=0.7857)
-122_o-lixo-como-solucao_saida.json#1 → LCI: 2.9000 (WL=7.52, LD=1.0000, FR=0.8182)
-122_o-lixo-como-solucao_saida.json#2 → LCI: 2.6973 (WL=6.97, LD=0.9459, FR=0.7568)
-123_o-lixo-e-suas-consequencias-na-sociedade_saida.json#0 → LCI: 2.8865 (WL=7.54, LD=0.9730, FR=0.7838)
-123_o-lixo-e-suas-consequencias-na-sociedade_saida.json#1 → LCI: 2.8667 (WL=7.48, LD=0.9394, FR=0.8182)
-123_o-lixo-e-suas-consequencias-na-sociedade_saida.json#2 → LCI: 2.8914 (WL=7.54, LD=0.9714, FR=0.8000)
-124_o-monopolio-da-destruicao-monopolio-da-destruicao_saida.json#0 → LCI: 3.1273 (WL=8.27, LD=1.0000, FR=0.8182)
-124_o-monopolio-da-destruicao-monopolio-da-destruicao_saida.json#1 → LCI: 2.7119 (WL=6.95, LD=0.9762, FR=0.7857)
-124_o-monopolio-da-destruicao-monopolio-da-destruicao_saida.json#2 → LCI: 2.6111 (WL=6.67, LD=0.9444, FR=0.7778)
-125_o-verdadeiro-problema-do-lixo-seu-descarte-incorreto_saida.json#0 → LCI: 2.8171 (WL=7.37, LD=0.9512, FR=0.7561)
-125_o-verdadeiro-problema-do-lixo-seu-descarte-incorreto_saida.json#1 → LCI: 2.9971 (WL=7.82, LD=0.9412, FR=0.9118)
-125_o-verdadeiro-problema-do-lixo-seu-descarte-incorreto_saida.json#2 → LCI: 2.8758 (WL=7.52, LD=0.9394, FR=0.8182)
-126_os-verdadeiro-viloes_saida.json#0 → LCI: 3.2565 (WL=8.61, LD=1.0000, FR=0.9130)
-126_os-verdadeiro-viloes_saida.json#1 → LCI: 2.8425 (WL=7.35, LD=0.9750, FR=0.8250)
-126_os-verdadeiro-viloes_saida.json#2 → LCI: 2.7853 (WL=7.26, LD=0.9412, FR=0.7647)
-127_planeta-terra-a-lata-de-lixo-comunitaria_saida.json#0 → LCI: 2.9200 (WL=7.56, LD=1.0000, FR=0.8400)
-127_planeta-terra-a-lata-de-lixo-comunitaria_saida.json#1 → LCI: 2.8200 (WL=7.25, LD=0.9750, FR=0.8500)
-127_planeta-terra-a-lata-de-lixo-comunitaria_saida.json#2 → LCI: 2.9806 (WL=7.81, LD=0.9677, FR=0.8387)
-128_salvando-o-planeta_saida.json#0 → LCI: 2.5467 (WL=6.43, LD=0.9667, FR=0.7667)
-128_salvando-o-planeta_saida.json#1 → LCI: 2.8452 (WL=7.42, LD=0.9677, FR=0.7742)
-128_salvando-o-planeta_saida.json#2 → LCI: 2.8029 (WL=7.29, LD=0.9412, FR=0.7941)
-129_sem-titulo-_saida.json#0 → LCI: 2.9290 (WL=7.71, LD=0.9355, FR=0.8065)
-129_sem-titulo-_saida.json#1 → LCI: 2.7297 (WL=7.03, LD=0.9459, FR=0.8108)
-129_sem-titulo-_saida.json#2 → LCI: 2.8567 (WL=7.40, LD=0.9667, FR=0.8333)
-130_todo-ciclo-deve-ser-respeitado-o-do-lixo-tambem_saida.json#0 → LCI: 2.8690 (WL=7.45, LD=0.9655, FR=0.8276)
-130_todo-ciclo-deve-ser-respeitado-o-do-lixo-tambem_saida.json#1 → LCI: 2.4897 (WL=6.38, LD=0.9744, FR=0.6154)
-130_todo-ciclo-deve-ser-respeitado-o-do-lixo-tambem_saida.json#2 → LCI: 2.9516 (WL=7.74, LD=0.9677, FR=0.8065)
-131_a-pressa-e-inimiga-do-bom-motorista_saida.json#0 → LCI: 3.3250 (WL=8.85, LD=1.0000, FR=0.9000)
-131_a-pressa-e-inimiga-do-bom-motorista_saida.json#1 → LCI: 2.8333 (WL=7.31, LD=0.9762, FR=0.8333)
-131_a-pressa-e-inimiga-do-bom-motorista_saida.json#2 → LCI: 2.6774 (WL=6.94, LD=0.9355, FR=0.7419)
-132_caos-nas-ruas_saida.json#0 → LCI: 3.0040 (WL=7.88, LD=1.0000, FR=0.8000)
-132_caos-nas-ruas_saida.json#1 → LCI: 2.8429 (WL=7.34, LD=1.0000, FR=0.8000)
-132_caos-nas-ruas_saida.json#2 → LCI: 2.7441 (WL=7.03, LD=0.9706, FR=0.8235)
-133_conscientizar-e-reduzir_saida.json#0 → LCI: 3.0406 (WL=8.03, LD=0.9688, FR=0.8125)
-133_conscientizar-e-reduzir_saida.json#1 → LCI: 3.0515 (WL=8.00, LD=0.9697, FR=0.8788)
-133_conscientizar-e-reduzir_saida.json#2 → LCI: 2.6267 (WL=6.70, LD=0.9667, FR=0.7667)
-134_discussoes-no-transito_saida.json#0 → LCI: 2.7184 (WL=7.00, LD=0.9737, FR=0.7632)
-134_discussoes-no-transito_saida.json#1 → LCI: 2.8182 (WL=7.41, LD=0.9091, FR=0.7727)
-134_discussoes-no-transito_saida.json#2 → LCI: 2.6893 (WL=6.89, LD=0.9643, FR=0.7857)
-135_dualidade_saida.json#0 → LCI: 2.8194 (WL=7.32, LD=1.0000, FR=0.7419)
-135_dualidade_saida.json#1 → LCI: 3.0964 (WL=8.14, LD=0.9643, FR=0.8929)
-135_dualidade_saida.json#2 → LCI: 2.6760 (WL=6.88, LD=0.9600, FR=0.7600)
-
-Dataset Data:
-Média do LCI:   2.4300
-Desvio padrão:  0.1149
-
-Dataset QwenMax:
-Média do LCI:   2.8561
-Desvio padrão:  0.1883
+Arquivos do Dataset Data:
+prompt.xml (Subpasta: a-aids-nao-e-mais-a-mesma-por-que-diminuiu-o-medo-da-doenca) → Complexidade lexical: 2.3008
+prompt.xml (Subpasta: a-energia-nuclear-e-uma-boa-solucao-para-o-brasil) → Complexidade lexical: 2.5424
+prompt.xml (Subpasta: a-gramatica-facilita-ou-dificulta-a-comunicacao) → Complexidade lexical: 2.6949
+prompt.xml (Subpasta: a-necessidade-de-crer-em-herois) → Complexidade lexical: 2.3611
+prompt.xml (Subpasta: a-policia-se-excede-contra-os-manifestantes-ou-cumpre-seu-papel) → Complexidade lexical: 2.6068
+prompt.xml (Subpasta: a-quem-cabe-a-responsabilidade-sobre-a-escolha-alimentar-da-populacao) → Complexidade lexical: 2.6389
+prompt.xml (Subpasta: a-questao-do-lixo-nas-sociedades-de-consumo) → Complexidade lexical: 2.5902
+prompt.xml (Subpasta: a-sociedade-brasileira-e-os-conflitos-no-transito) → Complexidade lexical: 2.5357
+prompt.xml (Subpasta: a-sociedade-esta-perdendo-a-batalha-contra-o-crime) → Complexidade lexical: 2.3488
+prompt.xml (Subpasta: a-virgindade-e-um-valor-moral-a-ser-preservado) → Complexidade lexical: 2.5125
+prompt.xml (Subpasta: agua-aprenderemos-com-a-atual-crise-hidrica) → Complexidade lexical: 2.4365
+prompt.xml (Subpasta: amar-pode-levar-ao-crime-ou-quem-ama-nao-mata) → Complexidade lexical: 2.1687
+prompt.xml (Subpasta: amor-com-grande-diferenca-de-idade-sera-que-isso-funciona) → Complexidade lexical: 2.3814
+prompt.xml (Subpasta: automedicacao-por-que-a-pratica-e-tao-comum-entre-os-jovens) → Complexidade lexical: 2.3548
+prompt.xml (Subpasta: bicicletas-e-ciclofaixas-estao-chegando-para-ficar) → Complexidade lexical: 2.4460
+prompt.xml (Subpasta: biografias-personagens-e-autores-em-confronto) → Complexidade lexical: 2.5922
+prompt.xml (Subpasta: caso-geisy-exibicionismo-machismo-intolerancia-ou-ma-educacao) → Complexidade lexical: 2.6559
+prompt.xml (Subpasta: cientistas-preveem-futuro-sombrio-para-terra) → Complexidade lexical: 2.2449
+prompt.xml (Subpasta: combate-ao-fumo-autoritarismo-ou-dever-do-governo) → Complexidade lexical: 2.2529
+prompt.xml (Subpasta: como-devem-ser-as-relacoes-entre-as-pessoas-e-seus-animais-de-estimacao) → Complexidade lexical: 2.6000
+prompt.xml (Subpasta: como-resolver-o-problema-da-criminalidade-infantil-em-nossa-sociedade) → Complexidade lexical: 2.6583
+prompt.xml (Subpasta: como-se-tornar-um-consumidor-consciente-isso-e-possivel) → Complexidade lexical: 2.6296
+prompt.xml (Subpasta: como-solucionar-o-problema-do-bullying-na-escola-ou-na-internet) → Complexidade lexical: 2.0000
+prompt.xml (Subpasta: como-voce-encara-os-cursos-a-distancia-e-as-universidades-virtuais) → Complexidade lexical: 2.7297
+prompt.xml (Subpasta: cotas-nas-universidades-voce-e-a-favor-ou-contra) → Complexidade lexical: 2.5833
+prompt.xml (Subpasta: cotas-para-universidades-federais-solucao-ou-problema) → Complexidade lexical: 2.5932
+prompt.xml (Subpasta: cultura-do-estupro-a-culpa-e-da-vitima) → Complexidade lexical: 2.7193
+prompt.xml (Subpasta: deve-ou-nao-haver-leis-mais-rigorosas-controlando-o-consumo-do-alcool) → Complexidade lexical: 2.5789
+prompt.xml (Subpasta: deve-se-reduzir-a-maioridade-penal-no-brasil) → Complexidade lexical: 2.5000
+prompt.xml (Subpasta: e-certo-ou-errado-leiloar-a-virgindade-por-que) → Complexidade lexical: 2.2574
+prompt.xml (Subpasta: e-justo-proibir-o-uso-do-celular-na-sala-de-aula) → Complexidade lexical: 2.5000
+prompt.xml (Subpasta: e-possivel-prevenir-massacres-como-o-da-escola-de-realengo) → Complexidade lexical: 2.7576
+prompt.xml (Subpasta: e-valido-simplificar-a-linguagem-de-um-classico) → Complexidade lexical: 2.6727
+prompt.xml (Subpasta: enchentes-o-excesso-de-chuvas-e-o-unico-responsavel-pelo-desastre) → Complexidade lexical: 2.3451
+prompt.xml (Subpasta: eutanasia-quem-decide-a-hora-certa-de-morrer) → Complexidade lexical: 2.5486
+prompt.xml (Subpasta: experiencias-com-animais-e-violencia-em-manifestacoes) → Complexidade lexical: 2.5888
+prompt.xml (Subpasta: favela-e-cidade-as-distancias-sociais-desapareceram) → Complexidade lexical: 2.6267
+prompt.xml (Subpasta: fomos-dominados-pelas-maquinas-que-inventamos) → Complexidade lexical: 2.5385
+prompt.xml (Subpasta: forma-fisica-corpo-perfeito-e-consumismo) → Complexidade lexical: 2.5259
+prompt.xml (Subpasta: gravidez-fora-de-hora-adolescencia-em-crise) → Complexidade lexical: 2.3562
+prompt.xml (Subpasta: ha-limites-para-a-liberdade-de-expressao) → Complexidade lexical: 2.5278
+prompt.xml (Subpasta: hoje-no-brasil-o-negro-apresenta-o-mesmo-status-social-que-o-branco) → Complexidade lexical: 2.4100
+prompt.xml (Subpasta: horario-politico-obrigatorio-bom-para-quem) → Complexidade lexical: 2.6641
+prompt.xml (Subpasta: idosos-em-nossa-sociedade-valorizados-desvalorizados-ou-privilegiados) → Complexidade lexical: 2.5875
+prompt.xml (Subpasta: intolerancia-religiosa-regra-ou-excecao-no-brasil) → Complexidade lexical: 2.7551
+prompt.xml (Subpasta: justica-x-vinganca-como-nao-confundir-as-duas-coisas) → Complexidade lexical: 2.6356
+prompt.xml (Subpasta: juventude-e-alcoolismo-um-problema-social) → Complexidade lexical: 2.5326
+prompt.xml (Subpasta: leis-e-penas-mais-duras-sao-a-unica-solucao-para-o-transito-brasileiro) → Complexidade lexical: 2.3115
+prompt.xml (Subpasta: lixo-questao-de-cidadania-e-responsabilidade-social) → Complexidade lexical: 2.4380
+prompt.xml (Subpasta: maconha-manter-proibicao-legalizar-descriminalizar) → Complexidade lexical: 2.4370
+prompt.xml (Subpasta: meia-entrada-voce-e-contra-ou-a-favor-por-que) → Complexidade lexical: 2.4273
+prompt.xml (Subpasta: mentira-e-doenca-problema-moral-necessidade-ou-brincadeira) → Complexidade lexical: 2.6170
+prompt.xml (Subpasta: nacional-ou-importada-qual-a-cara-do-brasil) → Complexidade lexical: 2.5000
+prompt.xml (Subpasta: norma-culta-x-variantes-linguisticas-qual-deve-ser-a-posicao-da-escola) → Complexidade lexical: 2.4419
+prompt.xml (Subpasta: o-aborto-deve-ou-nao-deve-ser-legalizado-por-que) → Complexidade lexical: 2.3976
+prompt.xml (Subpasta: o-brasil-e-o-conflito-defesa-do-meio-ambiente-x-desenvolvimento-economico) → Complexidade lexical: 2.6979
+prompt.xml (Subpasta: o-conceito-de-familia-pode-ou-nao-pode-mudar) → Complexidade lexical: 2.3636
+prompt.xml (Subpasta: o-conflito-entre-geracoes-e-a-convivencia-social) → Complexidade lexical: 2.6574
+prompt.xml (Subpasta: o-famoso-conflito-de-geracoes-ainda-existe-hoje) → Complexidade lexical: 2.4247
+prompt.xml (Subpasta: o-fumo-deve-ser-proibido-em-todos-os-lugares) → Complexidade lexical: 2.4048
+prompt.xml (Subpasta: o-horario-de-propaganda-eleitoral-e-util-para-o-eleitor) → Complexidade lexical: 2.5574
+prompt.xml (Subpasta: o-jovem-perdeu-o-interesse-pela-participacao-eleitoral-por-que) → Complexidade lexical: 2.3889
+prompt.xml (Subpasta: o-mma-e-um-esporte-como-outros-ou-injustificada-glorificacao-da-violencia) → Complexidade lexical: 2.4225
+prompt.xml (Subpasta: o-papel-do-estado-na-vida-do-cidadao-e-das-nacoes) → Complexidade lexical: 2.5167
+prompt.xml (Subpasta: o-preconceito-racial-esta-chegando-ao-fim) → Complexidade lexical: 2.3750
+prompt.xml (Subpasta: o-que-e-ser-homem-nos-dias-de-hoje) → Complexidade lexical: 2.6444
+prompt.xml (Subpasta: o-que-muda-no-pais-apos-as-manifestacoes-populares) → Complexidade lexical: 2.6087
+prompt.xml (Subpasta: o-que-voce-acha-do-ensino-nas-escolas-do-brasil) → Complexidade lexical: 2.5467
+prompt.xml (Subpasta: o-que-voce-acha-do-novo-acordo-ortografico) → Complexidade lexical: 2.6494
+prompt.xml (Subpasta: o-que-voce-pensa-da-proibicao-a-pratica-do-castigo-fisico) → Complexidade lexical: 2.3878
+prompt.xml (Subpasta: o-supremo-tribunal-federal-fez-bem-em-legalizar-o-aborto-de-anencefalos) → Complexidade lexical: 2.4957
+prompt.xml (Subpasta: o-uso-da-maconha-deve-ou-nao-ser-legalizado) → Complexidade lexical: 2.5538
+prompt.xml (Subpasta: o-voto-nulo-e-um-ato-politico-valido) → Complexidade lexical: 2.0000
+prompt.xml (Subpasta: organismos-transgenicos-fonte-de-problemas-ou-de-solucoes) → Complexidade lexical: 2.5614
+prompt.xml (Subpasta: os-efeitos-da-covardia-e-da-coragem-sobre-a-sociedade) → Complexidade lexical: 2.4478
+prompt.xml (Subpasta: por-que-a-ideia-de-fim-do-mundo-atrai-e-assusta) → Complexidade lexical: 2.4158
+prompt.xml (Subpasta: por-que-as-pessoas-mentem-pela-internet) → Complexidade lexical: 2.5763
+prompt.xml (Subpasta: por-que-causas-o-jovem-tem-se-mobilizado-atualmente-no-brasil) → Complexidade lexical: 2.7042
+prompt.xml (Subpasta: por-que-o-patriotismo-brasileiro-so-se-revela-em-epoca-de-copa-do-mundo) → Complexidade lexical: 2.5543
+prompt.xml (Subpasta: quais-as-condicoes-necessarias-para-se-atingir-o-sucesso-profissional) → Complexidade lexical: 2.5397
+prompt.xml (Subpasta: qual-a-importancia-para-o-brasil-e-para-o-mundo-da-crise-financeira-dos-paises-da-zona-do-euro) → Complexidade lexical: 2.4470
+prompt.xml (Subpasta: qual-a-relacao-entre-o-estudo-e-uma-carreira-profissional-bem-sucedida) → Complexidade lexical: 2.4174
+prompt.xml (Subpasta: qual-e-o-limite-entre-o-trote-e-o-crime) → Complexidade lexical: 2.5902
+prompt.xml (Subpasta: qual-o-papel-da-imprensa-numa-sociedade-democratica) → Complexidade lexical: 2.3913
+prompt.xml (Subpasta: qual-o-papel-da-mulher-na-sociedade-brasileira-atual) → Complexidade lexical: 2.6095
+prompt.xml (Subpasta: qual-sera-o-legado-da-copa-do-mundo-para-o-brasil) → Complexidade lexical: 2.3796
+prompt.xml (Subpasta: racismo-como-virar-de-vez-essa-triste-pagina-da-historia) → Complexidade lexical: 2.6018
+prompt.xml (Subpasta: reforma-politica-no-brasil-qual-o-melhor-modelo-de-votacao) → Complexidade lexical: 2.6832
+prompt.xml (Subpasta: selinho-e-inocente-ou-tem-significado-sexual) → Complexidade lexical: 2.2405
+prompt.xml (Subpasta: terrorismo-o-brasil-tem-razoes-para-teme-lo) → Complexidade lexical: 2.4215
+prompt.xml (Subpasta: toque-de-recolher-protege-juventude-e-sociedade) → Complexidade lexical: 2.2778
+prompt.xml (Subpasta: um-cachorro-vale-mais-do-que-um-ser-humano) → Complexidade lexical: 2.2174
+prompt.xml (Subpasta: viagem-sem-volta-a-marte-pioneirismo-ou-alucinacao) → Complexidade lexical: 2.4037
+prompt.xml (Subpasta: violencia-escolar-expor-o-problema-e-sugerir-solucoes) → Complexidade lexical: 2.3879
+prompt.xml (Subpasta: votar-em-palhaco-e-uma-forma-valida-de-protestar) → Complexidade lexical: 2.4112
