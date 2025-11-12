@@ -1,7 +1,3 @@
-A métrica de complexidade lexical (LCI) é medida com base em outras métricas. No código, foram utilizadas três métricas para calcular essa.
-Uma é baseada no comprimento médio das palavras, isso é a média de quantas letras cada palavra do texto tem. Ela é chamada de WL e foi utilizada pois textos com palavras mais longas tendem parecer mais complexos.
-A outra é a frequência de palavras raras (FR), e foi utilizada porque quanto mais termos pouco comuns são usados, maior é a riqueza do texto.
-E por último foi utilizado a diversidade lexical (LD), que mostra quantas palavras diferentes o autor usa sem as repetir na redação. Isso porque um texto repetitivo é considerado um texto de pouca qualidade e cansativo.
-Essa métrica usa o TTR, que é a razão do tipo (palavras únicas)/ tokens (total de palavras).
-Fazendo a média ponderada dessas três métricas, obtemos a complexidade lexical do texto. No caso do código que está aqui no repositório, todas as métricas receberam o mesmo peso.
+A métrica de complexidade lexical (LCI) foi medida com base na quantidade média de sílabas por palavra
+Além disso, foi calculado a média e o desvio padrão.
 O código foi feito para ler o dataset Qwen3-Max e o "Data". No dataset Qwen3-Max estão presentes os comandos temáticos sintéticos, que foram gerados a partir de outros comandos temáticos, que estão presentes no "Data"
