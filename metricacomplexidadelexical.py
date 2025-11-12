@@ -1,168 +1,114 @@
-# -*- coding: utf-8 -*-
 import os
 import re
+import glob
 import json
+from bs4 import BeautifulSoup
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import statistics
 
+def word2syllables(word):
+    pattern = r'[^aeiouáéíóúâêîôûãõü]+[aeiouáéíóúâêîôûãõü]+|[aeiouáéíóúâêîôûãõü]+'
+    return re.findall(pattern, word, re.IGNORECASE)
 
-#Função para ordenar os arquivos numericamente
-def natural_sort_key(texto):
-    import re
-    return [int(c) if c.isdigit() else c for c in re.split(r'(\d+)', texto)]
+def minha_tokenizacao(texto):
+    tokens = re.findall(r'\b[\wáéíóúâêîôûãõçü]+\b', texto, re.UNICODE)
+    tokens_filtrados = [t for t in tokens if len(t) >= 3]
+    return tokens_filtrados
 
-#Análise léxica
-def extrair_palavras(texto):
-    """Extrai palavras com pelo menos 3 caracteres (inclui acentos)."""
-    if not texto or not texto.strip():
-        return []
-    return re.findall(r'\b[a-zA-ZÀ-ÿ]{3,}\b', texto.lower())
+def complexidade_lexical(tokens):
+    if not tokens:
+        return 0
+    total_silabas = sum(len(word2syllables(token.lower())) for token in tokens)
+    return total_silabas / len(tokens)
 
-def calcular_wl(texto):
-    #Comprimento médio das palavras
-    palavras = extrair_palavras(texto)
-    if not palavras:
-        return 0.0
-    total_caracteres = sum(len(p) for p in palavras)
-    return total_caracteres / len(palavras)
+def processar_texto(texto):
+    tokens = minha_tokenizacao(texto)
+    return complexidade_lexical(tokens)
 
-def calcular_ld(texto):
-    #Diversidade lexical = tipos/tokens
-    palavras = extrair_palavras(texto)
-    if not palavras:
-        return 0.0
-    tipos = len(set(palavras))
-    tokens = len(palavras)
-    return tipos / tokens if tokens > 0 else 0.0
+def natural_key(string_):
+    return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', string_)]
 
-def calcular_fr(texto):
-    #Proporção de palavras raras
-    palavras = extrair_palavras(texto)
-    if not palavras:
-        return 0.0
-    # Nesse código, uma palavra rara foi considerada como uma palavra com mais de 5 caracteres
-    raras = [p for p in palavras if len(p) >= 5]
-    return len(raras) / len(palavras)
+def processar_dataset_qwenmax(caminho_pasta):
+    comp_lexs = []
+    arquivos_json = glob.glob(os.path.join(caminho_pasta, '*.json'))
+    arquivos_json.sort(key=natural_key)
+    print(f"Processando {len(arquivos_json)} arquivos QwenMax...")
+    for arquivo in arquivos_json:
+        with open(arquivo, 'r', encoding='utf-8') as f:
+            dados = json.load(f)
+        if not isinstance(dados, list):
+            dados = [dados]
+        for item in dados:
+            texto_gerado = item.get("comando_tematico", {})
+            texto = " ".join(texto_gerado.values()) if texto_gerado else ""
+            comp_lex = processar_texto(texto)
+            print(f"{os.path.basename(arquivo)} → Complexidade lexical: {comp_lex:.4f}")
+            comp_lexs.append(comp_lex)
+    return comp_lexs
 
-def calcular_lci(texto, w1=0.3, w2=0.4, w3=0.3):
-    """Índice de complexidade lexical combinado."""
-    wl = calcular_wl(texto)
-    ld = calcular_ld(texto)
-    fr = calcular_fr(texto)
-    lci = w1 * wl + w2 * ld + w3 * fr
-    return lci, wl, ld, fr
+def processar_dataset_data(caminho_base):
+    comp_lexs = []
+    arquivos_processados = 0
+    print(f"Processando arquivos do Dataset Data em {caminho_base}...")
+    for root, dirs, files in os.walk(caminho_base):
+        for file in files:
+            if "prompt" in file.lower() and file.lower().endswith(".xml"):
+                caminho_arquivo = os.path.join(root, file)
+                nome_subpasta = os.path.basename(root)
+                try:
+                    with open(caminho_arquivo, 'r', encoding='utf-8') as f:
+                        from xml.etree import ElementTree as ET
+                        tree = ET.parse(caminho_arquivo)
+                        root_element = tree.getroot()
+                        body_element = root_element.find('.//body')
+                        if body_element is not None:
+                            texto = (body_element.text or "").strip()
+                            comp_lex = processar_texto(texto)
+                            print(f"{file} (Subpasta: {nome_subpasta}) → Complexidade lexical: {comp_lex:.4f}")
+                            comp_lexs.append(comp_lex)
+                            arquivos_processados += 1
+                        else:
+                            print(f"Arquivo {file} não contém tag <body>")
+                except Exception as e:
+                    print(f"Erro ao processar {caminho_arquivo}: {e}")
+    print(f"Total de arquivos Data processados: {arquivos_processados}")
+    return comp_lexs
 
+def plotar_boxplots(comp_lex_qwenmax, comp_lex_data):
+    colors = ['#1f77b4', '#add8e6']  # azul escuro (QwenMax) e azul claro (Data)
+    labels = ['QwenMax', 'Dataset Data']
 
-# Leitura dos datasets
+    mean_qwenmax = statistics.mean(comp_lex_qwenmax) if comp_lex_qwenmax else 0
+    std_qwenmax = statistics.stdev(comp_lex_qwenmax) if len(comp_lex_qwenmax) > 1 else 0
+    mean_data = statistics.mean(comp_lex_data) if comp_lex_data else 0
+    std_data = statistics.stdev(comp_lex_data) if len(comp_lex_data) > 1 else 0
 
-def processar_data():
-    PASTA = "Data"
-    if not os.path.isdir(PASTA):
-        print(f"Pasta 'Data' não encontrada.")
-        return []
+    print(f"\nQwenMax - Média: {mean_qwenmax:.4f}, Desvio padrão: {std_qwenmax:.4f}")
+    print(f"Dataset Data - Média: {mean_data:.4f}, Desvio padrão: {std_data:.4f}")
 
-    subpastas = [d for d in os.listdir(PASTA) if os.path.isdir(os.path.join(PASTA, d))]
-    subpastas.sort(key=natural_sort_key)
-    
-    lcis = []
-    print("COMANDOS ORIGINAIS (Data)")
-    for subpasta in subpastas:
-        xml_path = os.path.join(PASTA, subpasta, "prompt.xml")
-        if not os.path.isfile(xml_path):
-            continue
+    fig, ax = plt.subplots(figsize=(10, 6))
+    box = ax.boxplot([comp_lex_qwenmax, comp_lex_data], patch_artist=True, labels=labels, showmeans=True,
+                     meanprops={"marker":"o", "markerfacecolor":"green", "markeredgecolor":"black"})
 
-        try:
-            with open(xml_path, "r", encoding="utf-8") as f:
-                conteudo = f.read()
-            match = re.search(r"<body>(.*?)</body>", conteudo, re.DOTALL | re.IGNORECASE)
-            if not match:
-                continue
-            body = match.group(1).strip()
-            if not body:
-                continue
+    for patch, color in zip(box['boxes'], colors):
+        patch.set_facecolor(color)
 
-            lci, wl, ld, fr = calcular_lci(body)
-            if lci > 0:
-                print(f"{subpasta:<20} - LCI: {lci:.4f} (WL={wl:.2f}, LD={ld:.4f}, FR={fr:.4f})")
-                lcis.append(lci)
-        except:
-            continue
+    legend_elements = [
+        Line2D([0], [0], color=colors[0], lw=4, label='QwenMax'),
+        Line2D([0], [0], color=colors[1], lw=4, label='Dataset Data'),
+        Line2D([0], [0], marker='o', color='w', label='Média', markerfacecolor='green', markeredgecolor='black', markersize=10)
+    ]
 
-    return lcis
+    ax.legend(handles=legend_elements, loc='upper right')
+    ax.set_title("Comparação da Complexidade Lexical")
+    ax.set_ylabel("Média de Sílabas por Palavra")
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.show()
 
-def processar_qwenmax():
-    PASTA = "QwenMax"
-    if not os.path.isdir(PASTA):
-        print(f"Pasta 'QwenMax' não encontrada.")
-        return []
-
-    json_files = [f for f in os.listdir(PASTA) if f.endswith(".json")]
-    json_files.sort(key=natural_sort_key)
-    
-    lcis = []
-    print("COMANDOS SINTÉTICOS (QwenMax)")
-    
-    for arquivo in json_files:
-        caminho = os.path.join(PASTA, arquivo)
-        try:
-            with open(caminho, "r", encoding="utf-8") as f:
-                dados = json.load(f)
-            
-            if "comando_tematico" in dados and isinstance(dados["comando_tematico"], dict):
-                comandos = list(dados["comando_tematico"].values())
-            elif isinstance(dados, dict) and all(isinstance(v, str) for v in dados.values()):
-                comandos = list(dados.values())
-            elif isinstance(dados, list):
-                comandos = dados
-            else:
-                continue
-
-            for i, cmd in enumerate(comandos):
-                if not isinstance(cmd, str):
-                    continue
-                cmd = cmd.strip()
-                if not cmd:
-                    continue
-                lci, wl, ld, fr = calcular_lci(cmd)
-                if lci > 0:
-                    nome_exibicao = f"{arquivo}#{i}"
-                    print(f"{nome_exibicao:<20} → LCI: {lci:.4f} (WL={wl:.2f}, LD={ld:.4f}, FR={fr:.4f})")
-                    lcis.append(lci)
-
-        except Exception as e:
-            continue
-
-    return lcis
-
-
-# Execução principal
-def main():
-    print("Métrica de Complexidade Lexical (LCI)")
-    
-    lcis_originais = processar_data()
-    lcis_sinteticos = processar_qwenmax()
-
-    # --- Originais ---
-    print("\n" + "="*70)
-    print("Dataset Data")
-    print("="*70)
-    if lcis_originais:
-        media = statistics.mean(lcis_originais)
-        desvio = statistics.stdev(lcis_originais) if len(lcis_originais) > 1 else 0.0
-        print(f"Média do LCI:   {media:.4f}")
-        print(f"Desvio padrão:  {desvio:.4f}")
-    else:
-        print("Nenhum comando original processado.")
-
-    # --- Sintéticos ---
-    print("\n" + "="*70)
-    print("Dataset QwenMax")
-    print("="*70)
-    if lcis_sinteticos:
-        media = statistics.mean(lcis_sinteticos)
-        desvio = statistics.stdev(lcis_sinteticos) if len(lcis_sinteticos) > 1 else 0.0
-        print(f"Média do LCI:   {media:.4f}")
-        print(f"Desvio padrão:  {desvio:.4f}")
-    else:
-        print("Nenhum comando sintético processado.")
 if __name__ == "__main__":
-    main()
+    caminho_qwenmax = "QwenMax"
+    caminho_data = "Data"
+    comp_lex_qwenmax = processar_dataset_qwenmax(caminho_qwenmax)
+    comp_lex_data = processar_dataset_data(caminho_data)
+    plotar_boxplots(comp_lex_qwenmax, comp_lex_data)
